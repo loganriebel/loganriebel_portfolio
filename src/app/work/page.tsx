@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import { siteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Work | Logan Riebel",
+  description:
+    "Portfolio work in marketing analytics and agentic GTM workflows by Logan Riebel.",
+  alternates: {
+    canonical: `${siteUrl}/work`
+  }
+};
 
 export default function WorkPage() {
   const marketingProjects = projects.filter(

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Fraunces, IBM_Plex_Sans } from "next/font/google";
 import Link from "next/link";
+import { PersonSchema } from "@/components/PersonSchema";
 import "./globals.css";
 import { profile } from "@/data/profile";
+import { siteUrl } from "@/lib/site";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -21,7 +23,10 @@ export const metadata: Metadata = {
   title: "Logan Riebel | Marketing Analytics Engineer",
   description:
     "Portfolio for Logan Riebel, a marketing analytics engineer building GTM reporting systems, measurement workflows, and agentic analytics tools.",
-  metadataBase: new URL("https://loganriebel.com"),
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl
+  },
   icons: {
     icon: [
       { url: "/icons/icon-48.png", sizes: "48x48", type: "image/png" },
@@ -60,6 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${display.variable} ${body.variable}`}>
+        <PersonSchema />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
