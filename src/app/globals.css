@@ -431,6 +431,7 @@ nav a:focus-visible {
   }
 
   .intro {
+    overflow-x: clip;
     padding-bottom: 0.25rem;
   }
 
@@ -505,21 +506,26 @@ nav a:focus-visible {
   }
 
   .proof-strip {
-    display: flex;
-    gap: 0.65rem;
-    grid-template-columns: none;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    padding: 0.75rem 0;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
+    border-block: none;
+    border-left: 2px solid var(--accent);
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: 1fr;
+    margin-top: 0.15rem;
+    overflow: visible;
+    padding: 0.5rem 0 0.5rem 0.65rem;
   }
 
   .proof-strip p {
-    flex: 0 0 min(82vw, 260px);
-    font-size: 0.82rem;
-    line-height: 1.4;
-    scroll-snap-align: start;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .proof-strip p::before {
+    color: var(--accent);
+    content: "• ";
+    font-weight: 800;
   }
 
   .split-section,
@@ -545,6 +551,11 @@ nav a:focus-visible {
   .site-header nav a {
     font-size: 0.82rem;
     padding: 0.35rem 0.45rem;
+  }
+
+  .proof-strip p {
+    font-size: 0.75rem;
+    line-height: 1.32;
   }
 
   h1 {
