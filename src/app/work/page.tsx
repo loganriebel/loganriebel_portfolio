@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio work in marketing analytics and agentic GTM workflows by Logan Riebel.",
   alternates: {
-    canonical: `${siteUrl}/work`
+    canonical: `${siteUrl}/work/`
   }
 };
 
