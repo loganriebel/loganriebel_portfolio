@@ -7,40 +7,42 @@ import { featuredProjects } from "@/data/projects";
 export default function Home() {
   return (
     <>
-      <section className="hero section-shell">
-        <div className="hero-copy">
-          <p className="eyebrow">Marketing analytics + agentic workflows</p>
-          <h1>I build GTM analytics systems that turn messy data into action.</h1>
-          <p className="hero-summary">{profile.summary}</p>
-          <div className="hero-actions" aria-label="Primary actions">
-            <a className="button primary" href="#experience">
-              Read experience
-            </a>
-            <Link className="button secondary" href="/work">
-              View portfolio work
-            </Link>
+      <div className="intro">
+        <section className="hero section-shell">
+          <div className="hero-copy">
+            <p className="eyebrow">Marketing analytics + agentic workflows</p>
+            <h1>I build GTM analytics systems that turn messy data into action.</h1>
+            <p className="hero-summary">{profile.summary}</p>
+            <div className="hero-actions" aria-label="Primary actions">
+              <a className="button primary" href="#experience">
+                Read experience
+              </a>
+              <Link className="button secondary" href="/work">
+                View portfolio work
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="portrait-card">
-          <Image
-            src={profile.headshot}
-            alt="Logan Riebel"
-            width={560}
-            height={700}
-            priority
-          />
-          <div>
-            <span>{profile.title}</span>
-            <strong>{profile.location}</strong>
+          <div className="portrait-card">
+            <Image
+              src={profile.headshot}
+              alt="Logan Riebel"
+              width={560}
+              height={700}
+              priority
+            />
+            <div>
+              <span>{profile.title}</span>
+              <strong>{profile.location}</strong>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section-shell proof-strip" aria-label="Profile highlights">
-        {profile.heroBullets.map((item) => (
-          <p key={item}>{item}</p>
-        ))}
-      </section>
+        <section className="section-shell proof-strip" aria-label="Profile highlights">
+          {profile.heroBullets.map((item) => (
+            <p key={item}>{item}</p>
+          ))}
+        </section>
+      </div>
 
       <section className="section-shell split-section">
         <div>
