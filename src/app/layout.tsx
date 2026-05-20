@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   description:
     "Portfolio for Logan Riebel, a marketing analytics engineer building GTM reporting systems, measurement workflows, and agentic analytics tools.",
   metadataBase: new URL("https://loganriebel.com"),
+  icons: {
+    icon: [
+      { url: "/icons/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icons/icon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" }
+    ],
+    apple: [
+      { url: "/icons/apple-icon-180.png", sizes: "180x180", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico"
+  },
   openGraph: {
     title: "Logan Riebel | Marketing Analytics Engineer",
     description:

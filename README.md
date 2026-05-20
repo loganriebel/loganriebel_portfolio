@@ -22,7 +22,13 @@ npm run dev
 npm run build
 ```
 
-The production static export is written to `out/`.
+The build generates favicon assets from `public/icons/favicon.svg`, then exports the site to `out/`.
+
+To regenerate icons only:
+
+```bash
+npm run generate:icons
+```
 
 ## Deployment Notes
 

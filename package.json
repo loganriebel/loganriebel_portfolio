@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate:icons && next build",
+    "generate:icons": "node scripts/generate-icons.mjs",
     "start": "next start",
     "lint": "eslint"
   },
@@ -20,6 +21,8 @@
     "@types/react-dom": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "png-to-ico": "latest",
+    "sharp": "latest",
     "typescript": "latest"
   }
 }
