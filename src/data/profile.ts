@@ -60,7 +60,7 @@ export const profile = {
       company: "ADP",
       period: "March 2022 - Present",
       bullets: [
-        "Build a governed analytics layer with dbt, MetricFlow, and Claude MCP so paid media and pipeline questions run on consistent definitions.",
+        "Build a governed analytics layer with dbt, MetricFlow, and Claude MCP so non-technical stakeholders can ask natural-language questions about paid media and pipeline data on consistent metric definitions.",
         "Run Tableau performance marketing dashboards on Salesforce and paid media data that cut cost per lead 20%.",
         "Inform allocation across $XXX million in annual digital spend using channel analysis, attribution, and modeling.",
         "Run A/B testing infrastructure for paid search bid strategies that improved conversion rates 30%."
