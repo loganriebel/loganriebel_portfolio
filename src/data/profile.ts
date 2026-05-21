@@ -49,12 +49,9 @@ export const profile = {
     "Claude Code",
     "Cursor",
     "Hermes",
-    "Cold Email",
     "Competitor Research",
     "Content Strategy",
-    "Competitive Intelligence",
-    "Workflow Design",
-    "GTM",
+    "GTM Workflows",
     "AI Workflow"
   ],
   experience: [
