@@ -158,7 +158,7 @@ export const projects: Project[] = [
       "Crawl on a schedule, diff new URLs, score relevance to ICP, and surface a short ranked list for marketing and product marketing.",
     proof:
       "Connects research automation to GTM prioritization, not a raw scrape dump.",
-    stack: ["Python", "Automation", "Competitor Research", "Content Strategy"],
+    stack: ["Python", "Hermes", "Automation", "Competitor Research", "Content Strategy"],
     href: "https://github.com/loganriebel/competitor_intel_agent",
     visual: {
       kind: "agent-workflow",
@@ -183,7 +183,7 @@ export const projects: Project[] = [
       "Agent steps gather firmographics and signals, score fit, and draft messaging hooks for human edit before CRM export.",
     proof:
       "Bridges marketing data habits with sales motion and governed human review.",
-    stack: ["Python", "GTM", "Outbound", "AI Workflow"],
+    stack: ["Python", "Hermes", "GTM", "Outbound", "AI Workflow"],
     href: "https://github.com/loganriebel/agentic-outbound-pipeline",
     visual: {
       kind: "agent-workflow",
