@@ -82,7 +82,7 @@ export const profile = {
       period: "September 2020 - July 2021",
       bullets: [
         "Delivered 20+ Power BI dashboards for healthcare and software clients across prospect through nurture.",
-        "Sized and analyzed $XXk to $XXXk per month in digital media with client spend kept private on this site.",
+        "Sized and analyzed $XXk to $XXXk per month in digital media.",
         "Reworked Marketo lead scoring and automation; MQL-to-SQL conversion rose 25% in two months."
       ]
     },
