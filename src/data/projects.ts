@@ -39,7 +39,7 @@ export const projects: Project[] = [
     approach:
       "Map metrics to a single funnel story: spend bands, lead quality, stage conversion, and channel mix. Build an executive KPI strip, trend views, drilldowns, and a short \"what changed\" narrative for the weekly readout.",
     proof:
-      "Connects paid media, web, and CRM data in one Tableau view so teams see how channels are performing, what is driving pipeline, and where to shift budget to improve CAC. Spend stays anonymized ($XXk / $XXX million) on this public site.",
+      "Connects paid media, web, and CRM data in one Tableau view so teams see how channels are performing, what is driving pipeline, and where to shift budget to improve CAC. The data surfaces where the highest-opportunity tests are.",
     stack: ["SQL", "Tableau", "Salesforce", "GA4", "dbt", "Redshift"],
     visual: {
       kind: "tableau-dashboard",
