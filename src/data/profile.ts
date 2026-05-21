@@ -15,8 +15,8 @@ export const profile = {
   ],
   strengths: [
     {
-      title: "Marketing analytics systems",
-      body: "SQL models, dashboards, and weekly reporting that tie channel spend to leads, pipeline, and conversion."
+      title: "Tableau & marketing analytics",
+      body: "Tableau dashboards built with SQL that power weekly GTM reporting. Ties media metrics to CRM outcomes so teams see what's driving pipeline and what to revise next."
     },
     {
       title: "AI-assisted GTM workflows",
