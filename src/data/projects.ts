@@ -40,7 +40,16 @@ export const projects: Project[] = [
       "Map metrics to a single funnel story: spend bands, lead quality, stage conversion, and channel mix. Build an executive KPI strip, trend views, drilldowns, and a short \"what changed\" narrative for the weekly readout.",
     proof:
       "Connects paid media, web, and CRM data in one Tableau view so teams see how channels are performing, what is driving pipeline, and where to shift budget to improve CAC. The data surfaces where the highest-opportunity tests are.",
-    stack: ["SQL", "Tableau", "Salesforce", "GA4", "dbt", "Redshift"],
+    stack: [
+      "SQL",
+      "Tableau",
+      "Salesforce",
+      "GA4",
+      "dbt",
+      "Redshift",
+      "Paid Search",
+      "Paid Social"
+    ],
     visual: {
       kind: "tableau-dashboard",
       caption:
@@ -125,6 +134,7 @@ export const projects: Project[] = [
     proof:
       "Shows a shipped competitor intelligence product: clear positioning, fulfillment workflow, and turning a rival's ad library into briefs your team can run against them.",
     stack: [
+      "Python",
       "Claude",
       "Meta Ad Library",
       "Competitive Intelligence",

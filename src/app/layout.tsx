@@ -88,6 +88,7 @@ export default function RootLayout({
           </div>
           <div className="footer-links">
             <a href={profile.linkedin}>LinkedIn</a>
+            <Link href="/work">Work</Link>
             <a href={profile.github}>GitHub</a>
           </div>
         </footer>
