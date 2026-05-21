@@ -43,7 +43,10 @@ export function ProjectCard({ project, featured = false }: Props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Open GitHub repo
+          {project.hrefLabel ??
+            (project.href.includes("github.com")
+              ? "Open GitHub repo"
+              : "Visit site")}
         </a>
       ) : null}
     </article>

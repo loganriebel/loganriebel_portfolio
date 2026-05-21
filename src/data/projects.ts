@@ -24,6 +24,7 @@ export type Project = {
   proof: string;
   stack: string[];
   href?: string;
+  hrefLabel?: string;
   visual?: ProjectVisual;
 };
 
@@ -113,6 +114,39 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "Mako Metrics",
+    category: "Agentic analytics",
+    summary:
+      "Shipped product at makometrics.com: competitor Meta ad intelligence delivered as a brief-ready PDF, not another dashboard to maintain.",
+    problem:
+      "DTC and ecommerce teams waste hours scrolling Meta's Ad Library when they need angles for the next creative brief and test plan.",
+    approach:
+      "Customer submits a competitor brief on Stripe. We pull public Ad Library data, score creative and copy patterns, and deliver a designed PDF with scorecards, hook rankings, and experiments to run within 24 hours.",
+    proof:
+      "Shows end-to-end product thinking: positioning, fulfillment workflow, report design, and turning public ad data into decisions a marketing team can act on.",
+    stack: [
+      "Meta Ad Library",
+      "Competitive Intelligence",
+      "PDF Reports",
+      "Next.js",
+      "Stripe"
+    ],
+    href: "https://makometrics.com/how-it-works",
+    hrefLabel: "See how Mako Metrics works",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Done-for-you flow from makometrics.com (no self-serve dashboard).",
+      stages: [
+        { label: "Competitor brief" },
+        { label: "Ad Library analysis" },
+        { label: "Report build" },
+        { label: "PDF delivery", gate: true }
+      ],
+      output:
+        "Competitive scorecard, hook leaderboard, and test ideas for the next brief"
+    }
+  },
+  {
     title: "Competitor Intelligence Agent",
     category: "Agentic analytics",
     summary:
@@ -160,31 +194,6 @@ export const projects: Project[] = [
         { label: "CRM export" }
       ],
       output: "Reviewed outreach brief per account"
-    }
-  },
-  {
-    title: "Mako Metrics MCP",
-    category: "Agentic analytics",
-    summary:
-      "MCP listing that exposes governed metric definitions so analytics agents query consistent numbers, not ad hoc SQL.",
-    problem:
-      "AI tools on top of analytics break when every session reinvents metric logic.",
-    approach:
-      "Publish metrics and safe query patterns through MCP so Claude and other clients use the same definitions as the BI layer.",
-    proof:
-      "Signals interest in metric governance and AI-native analytics interfaces, not dashboard screenshots alone.",
-    stack: ["MCP", "Analytics", "PowerShell", "AI Tooling"],
-    href: "https://github.com/loganriebel/mako-metrics-mcp",
-    visual: {
-      kind: "agent-workflow",
-      caption: "How governed metrics reach an AI client.",
-      stages: [
-        { label: "Metric registry" },
-        { label: "MCP surface" },
-        { label: "Agent query" },
-        { label: "Validated answer", gate: true }
-      ],
-      output: "Answers grounded in defined metrics and filters"
     }
   }
 ];
