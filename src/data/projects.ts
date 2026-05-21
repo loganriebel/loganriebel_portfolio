@@ -97,7 +97,7 @@ export const projects: Project[] = [
     approach:
       "Encode analysis, creative iteration, prune/scale rules, and post-test notes as repeatable agent steps tied to account structure.",
     proof:
-      "AI speeds up creative and copy testing, captures what each test learned, and pushes budget toward winners so paid social tactics improve cycle over cycle instead of stalling in one person's inbox.",
+      "AI speeds up creative and copy testing, surfaces patterns a human might miss in the account data, captures what each test learned, and pushes budget toward winners so paid social tactics improve cycle over cycle instead of stalling in one person's inbox.",
     stack: ["Python", "Cursor", "Paid Social", "Workflow Design"],
     href: "https://github.com/loganriebel/meta-ads-agent",
     visual: {
