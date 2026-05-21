@@ -52,7 +52,7 @@ export const profile = {
     "Competitor Research",
     "Content Strategy",
     "GTM Workflows",
-    "AI Workflow"
+    "AI Workflows"
   ],
   experience: [
     {
