@@ -42,7 +42,6 @@ export const profile = {
     "Paid Search",
     "Paid Social",
     "SEO",
-    "Meta Ad Library",
     "Media Mix Modeling",
     "Multi-Touch Attribution",
     "Incrementality Testing",
