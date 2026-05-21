@@ -70,7 +70,7 @@ export const projects: Project[] = [
     approach:
       "Split the work into named stages. Agents handle research and drafts; humans approve briefs and final copy before deploy.",
     proof:
-      "Shows orchestration, editorial control, and content ops design, not just a single prompt.",
+      "Significantly increases velocity to publish high-ranking content while keeping brand voice and quality intact through human gates at brief and final review.",
     stack: ["Python", "Claude Code", "SEO", "Content Pipeline"],
     href: "https://github.com/loganriebel/seo_agent_pipeline",
     visual: {
