@@ -62,7 +62,7 @@ export const profile = {
       bullets: [
         "Build a governed analytics layer with dbt and Claude MCP so non-technical stakeholders can ask natural-language questions about paid media and pipeline data on consistent metric definitions. Significantly reduces ad-hoc requests so I can stay focused on high-value analytics work.",
         "Run Tableau performance marketing dashboards on Salesforce and paid media data that cut cost per lead 20%.",
-        "Inform allocation across $XXX million in annual digital spend using channel analysis, attribution, and modeling.",
+        "Inform allocation across $XXX million in annual digital spend with media mix modeling (MMM), multi-touch attribution (MTA), and channel-level performance analysis.",
         "Run A/B testing infrastructure for paid search bid strategies that improved conversion rates 30%."
       ]
     },
