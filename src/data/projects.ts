@@ -157,7 +157,7 @@ export const projects: Project[] = [
     approach:
       "Crawl on a schedule, diff new URLs, score relevance to ICP, and surface a short ranked list for marketing, sales, and product marketing.",
     proof:
-      "Turns competitor moves into GTM action: a rival price increase becomes a head-to-head talking point for sales, feature or integration changes flag product opportunities, and marketing gets prioritized responses instead of a scrape dump.",
+      "Turns competitor moves into GTM action: a rival price increase becomes a head-to-head talking point for sales, feature or integration changes flag product opportunities, and marketing gets prioritized responses.",
     stack: ["Python", "Hermes", "Automation", "Competitor Research", "Content Strategy"],
     href: "https://github.com/loganriebel/competitor_intel_agent",
     visual: {
