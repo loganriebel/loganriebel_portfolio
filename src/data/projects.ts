@@ -173,28 +173,28 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "Agentic Outbound Pipeline",
+    title: "Agentic Cold Email Pipeline",
     category: "Agentic analytics",
     summary:
-      "Structured outbound: account research, fit reasoning, and draft outreach inputs reviewed before send.",
+      "Cold email outbound with AI: research the account, score fit, draft personalized first lines and hooks, then a human approves before anything hits the sequencer.",
     problem:
-      "Outbound quality swings with whoever wrote the account notes that week.",
+      "Cold email reply rates tank when every rep hand-researches accounts and writes from scratch, so messaging goes generic and pipeline depends on who had time that week.",
     approach:
-      "Agent steps gather firmographics and signals, score fit, and draft messaging hooks for human edit before CRM export.",
+      "Agents pull firmographics and intent signals, score ICP fit, and draft cold email copy and angles. Reps review and edit before export to the sending tool or CRM so nothing goes out unapproved.",
     proof:
-      "Bridges marketing data habits with sales motion and governed human review.",
-    stack: ["Python", "Hermes", "GTM", "Outbound", "AI Workflow"],
+      "More relevant cold email at scale: faster research, personalized hooks per account, and steadier reply potential without each rep rebuilding the same prep work.",
+    stack: ["Python", "Hermes", "Cold Email", "GTM", "AI Workflow"],
     href: "https://github.com/loganriebel/agentic-outbound-pipeline",
     visual: {
       kind: "agent-workflow",
-      caption: "Research-to-outreach path with a required review step.",
+      caption: "Account research → cold email draft → human send approval.",
       stages: [
         { label: "Account research" },
         { label: "Fit scoring" },
-        { label: "Draft hooks", gate: true },
-        { label: "CRM export" }
+        { label: "Draft cold email", gate: true },
+        { label: "Sequencer / CRM" }
       ],
-      output: "Reviewed outreach brief per account"
+      output: "Approved cold email copy and hooks per account"
     }
   }
 ];
