@@ -114,14 +114,14 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "Mako Metrics: Competitor Meta Ads",
+    title: "Mako Metrics: Meta Ads Competitor Spying",
     category: "Agentic analytics",
     summary:
       "A competitor Meta ad research tool: AI analyzes a rival's public Ad Library ads, a human reviews the read, and you get a brief-ready PDF, not another dashboard to maintain.",
     problem:
       "Teams need to study a competitor's live Facebook and Instagram ads before a creative brief, but scrolling Meta's Ad Library for one brand is slow and easy to misread.",
     approach:
-      "The customer names the competitor on Stripe. AI pulls that brand's public Ad Library ads, scores creative and copy patterns, and a human checks the analysis before we deliver a PDF with scorecards, hook rankings, and test ideas for your account within 24 hours.",
+      "The customer names the competitor on Stripe. AI pulls that brand's Ad Library data, scores creative and copy patterns, and a human checks the analysis before we deliver a PDF with scorecards, hook rankings, and test ideas for your account within 24 hours.",
     proof:
       "Shows a shipped competitor intelligence product: clear positioning, fulfillment workflow, and turning a rival's ad library into briefs your team can run against them.",
     stack: [
