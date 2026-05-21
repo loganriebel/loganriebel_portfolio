@@ -70,10 +70,10 @@ export const profile = {
       company: "ADP",
       period: "March 2022 - Present",
       bullets: [
-        "Built a governed analytics layer with dbt, MetricFlow, and Claude MCP so paid media and pipeline questions run on consistent definitions.",
-        "Shipped Tableau performance marketing dashboards on Salesforce and paid media data; cost per lead fell 20%.",
-        "Informed allocation across $XXX million in annual digital spend using channel analysis, attribution, and modeling.",
-        "Ran A/B testing infrastructure for paid search bid strategies; conversion rates improved 30%."
+        "Build a governed analytics layer with dbt, MetricFlow, and Claude MCP so paid media and pipeline questions run on consistent definitions.",
+        "Run Tableau performance marketing dashboards on Salesforce and paid media data that cut cost per lead 20%.",
+        "Inform allocation across $XXX million in annual digital spend using channel analysis, attribution, and modeling.",
+        "Run A/B testing infrastructure for paid search bid strategies that improved conversion rates 30%."
       ]
     },
     {

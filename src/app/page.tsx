@@ -65,7 +65,7 @@ export default function Home() {
           <h2>Roles, scope, and outcomes.</h2>
           <p>
             Spend figures are anonymized ($XXk, $XXX million) so you can see
-            scale without employer or client identifiers on a public site.
+            scale.
           </p>
         </div>
         <div className="timeline">
