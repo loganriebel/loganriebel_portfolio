@@ -83,7 +83,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <footer className="site-footer">
           <div>
-            <p>Ready to talk marketing analytics, GTM systems, or agentic workflows?</p>
+            <p>Hiring for marketing analytics or GTM systems? Email works best.</p>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
           </div>
           <div className="footer-links">

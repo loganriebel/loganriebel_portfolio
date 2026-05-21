@@ -1,8 +1,19 @@
 import type { Project } from "@/data/projects";
+import { ProjectVisual } from "@/components/ProjectVisual";
 
-export function ProjectCard({ project }: { project: Project }) {
+type Props = {
+  project: Project;
+  featured?: boolean;
+};
+
+export function ProjectCard({ project, featured = false }: Props) {
   return (
-    <article className="project-card">
+    <article
+      className={`project-card${featured ? " project-card-featured" : ""}`}
+    >
+      {project.visual ? (
+        <ProjectVisual visual={project.visual} title={project.title} />
+      ) : null}
       <div className="card-kicker">{project.category}</div>
       <h3>{project.title}</h3>
       <p className="project-summary">{project.summary}</p>
@@ -26,8 +37,13 @@ export function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
       {project.href ? (
-        <a className="text-link" href={project.href}>
-          View project
+        <a
+          className="text-link"
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open GitHub repo
         </a>
       ) : null}
     </article>

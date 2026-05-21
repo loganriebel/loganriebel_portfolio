@@ -10,15 +10,15 @@ export default function Home() {
       <div className="intro">
         <section className="hero section-shell">
           <div className="hero-copy">
-            <p className="eyebrow">Marketing analytics + agentic workflows</p>
-            <h1>I build GTM analytics systems that turn messy data into action.</h1>
+            <p className="eyebrow">Marketing analytics + AI workflows</p>
+            <h1>GTM data should answer budget questions, not start a spreadsheet hunt.</h1>
             <p className="hero-summary">{profile.summary}</p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button primary" href="#experience">
-                Read experience
+                Review analytics experience
               </a>
               <Link className="button secondary" href="/work">
-                View portfolio work
+                See selected work
               </Link>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Home() {
       <section className="section-shell split-section">
         <div>
           <p className="eyebrow">What I build</p>
-          <h2>Analytics that hiring managers can connect to business outcomes.</h2>
+          <h2>Reporting and workflows tied to spend, pipeline, and tests.</h2>
         </div>
         <div className="strength-grid">
           {profile.strengths.map((strength) => (
@@ -61,11 +61,11 @@ export default function Home() {
 
       <section className="section-shell resume-section" id="experience">
         <div className="section-heading">
-          <p className="eyebrow">Resume summary</p>
-          <h2>Past experience, written for the site.</h2>
+          <p className="eyebrow">Experience</p>
+          <h2>Roles, scope, and outcomes.</h2>
           <p>
-            Spend numbers are intentionally anonymized here. The public site
-            should show scope without exposing employer or client details.
+            Spend figures are anonymized ($XXk, $XXX million) so you can see
+            scale without employer or client identifiers on a public site.
           </p>
         </div>
         <div className="timeline">
@@ -90,7 +90,7 @@ export default function Home() {
       <section className="section-shell skills-section">
         <div className="section-heading">
           <p className="eyebrow">Toolbox</p>
-          <h2>Marketing, analytics, and AI workflow skills.</h2>
+          <h2>Tools I use in production.</h2>
         </div>
         <div className="tag-list large" aria-label="Skills">
           {profile.skills.map((skill) => (
@@ -103,10 +103,10 @@ export default function Home() {
         <div className="section-heading row-heading">
           <div>
             <p className="eyebrow">Selected work</p>
-            <h2>Portfolio pieces worth a closer look.</h2>
+            <h2>Case studies and repos with context.</h2>
           </div>
           <Link className="button secondary" href="/work">
-            See all work
+            Browse full portfolio
           </Link>
         </div>
         <div className="project-grid featured">

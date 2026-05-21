@@ -343,6 +343,262 @@ nav a:focus-visible {
   gap: 1rem;
 }
 
+.project-card-featured {
+  grid-column: 1 / -1;
+}
+
+.project-grid-featured {
+  grid-template-columns: 1fr;
+}
+
+.work-guide {
+  padding: 0 0 clamp(2rem, 5vw, 3rem);
+}
+
+.work-guide-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.work-guide-list {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 720px;
+}
+
+.work-guide-list li {
+  color: var(--muted);
+}
+
+.work-guide-list strong {
+  color: var(--ink);
+}
+
+.project-visual {
+  background: rgba(23, 61, 53, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 0.85rem;
+}
+
+.visual-caption {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin-top: 0.65rem;
+  text-align: left;
+}
+
+.tableau-dashboard .dash-kpi-row {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.dash-kpi {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.5rem 0.55rem;
+}
+
+.dash-kpi span {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dash-kpi strong {
+  color: var(--accent-strong);
+  font-size: 0.95rem;
+}
+
+.dash-main,
+.dash-footer {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dash-main {
+  grid-template-columns: 1.2fr 0.9fr 0.7fr;
+}
+
+.dash-footer {
+  grid-template-columns: 1fr 1fr;
+}
+
+.dash-panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  display: grid;
+  gap: 0.45rem;
+  min-height: 5.5rem;
+  padding: 0.5rem 0.55rem;
+}
+
+.dash-panel > span {
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dash-bars {
+  align-items: end;
+  display: flex;
+  gap: 0.35rem;
+  height: 3.2rem;
+}
+
+.dash-bars i {
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
+  border-radius: 0.2rem 0.2rem 0 0;
+  display: block;
+  flex: 1;
+}
+
+.dash-funnel {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.dash-funnel div {
+  background: rgba(47, 93, 80, 0.22);
+  border-radius: 0.2rem;
+  height: 0.55rem;
+}
+
+.dash-donut {
+  aspect-ratio: 1;
+  background: conic-gradient(
+    var(--accent) 0 42%,
+    rgba(47, 93, 80, 0.35) 42% 68%,
+    rgba(47, 93, 80, 0.15) 68% 100%
+  );
+  border-radius: 50%;
+  margin: 0.25rem auto 0;
+  max-width: 3.5rem;
+  position: relative;
+  width: 70%;
+}
+
+.dash-donut::after {
+  background: var(--white);
+  border-radius: 50%;
+  content: "";
+  height: 55%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+}
+
+.dash-panel.notes p {
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.dash-panel.table ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dash-panel.table li {
+  color: var(--ink);
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-top: 0.35rem;
+}
+
+.agent-workflow .workflow-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workflow-stages > li {
+  align-items: center;
+  display: flex;
+  gap: 0.15rem;
+  margin: 0;
+}
+
+.workflow-node {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  display: grid;
+  gap: 0.15rem;
+  min-width: 4.5rem;
+  padding: 0.45rem 0.5rem;
+}
+
+.workflow-step {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.workflow-node strong {
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.workflow-gate {
+  color: var(--accent-strong);
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.workflow-arrow {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.workflow-output {
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-top: 0.55rem;
+}
+
+.workflow-output span {
+  color: var(--accent);
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.15rem;
+  text-transform: uppercase;
+}
+
 .project-summary {
   color: var(--ink);
   font-weight: 600;
@@ -548,6 +804,23 @@ nav a:focus-visible {
   .featured,
   .project-grid:not(.featured) {
     grid-template-columns: 1fr;
+  }
+
+  .tableau-dashboard .dash-kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dash-main,
+  .dash-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-stages > li {
+    flex: 1 1 auto;
+  }
+
+  .workflow-arrow {
+    display: none;
   }
 }
 

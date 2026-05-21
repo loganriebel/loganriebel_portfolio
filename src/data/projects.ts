@@ -1,3 +1,20 @@
+export type TableauDashboardVisual = {
+  kind: "tableau-dashboard";
+  caption: string;
+  kpis: { label: string; value: string }[];
+  weeklyNote: string;
+  campaigns: { name: string; metric: string }[];
+};
+
+export type AgentWorkflowVisual = {
+  kind: "agent-workflow";
+  caption: string;
+  stages: { label: string; gate?: boolean }[];
+  output: string;
+};
+
+export type ProjectVisual = TableauDashboardVisual | AgentWorkflowVisual;
+
 export type Project = {
   title: string;
   category: "Marketing analytics" | "Agentic analytics";
@@ -7,91 +24,168 @@ export type Project = {
   proof: string;
   stack: string[];
   href?: string;
+  visual?: ProjectVisual;
 };
 
 export const projects: Project[] = [
   {
-    title: "Lightweight Marketing Analytics Workflow",
+    title: "Performance Marketing Tableau Dashboard",
     category: "Marketing analytics",
     summary:
-      "A practical reporting workflow for turning campaign, CRM, and funnel data into weekly decisions without exposing private client or employer spend.",
+      "Wireframe-first Tableau case study: weekly paid media and CRM reporting for budget and funnel decisions, with anonymized spend.",
     problem:
-      "Marketing teams often have channel metrics, CRM data, and budget context split across tools, which makes performance conversations slow and overly manual.",
+      "Paid media, Salesforce, and web analytics rarely line up in one view. Leadership asks for CPL and pipeline in the same meeting where the team is still reconciling exports.",
     approach:
-      "Structure inputs around campaign spend bands, lead quality, pipeline movement, and conversion rates; then summarize what changed, why it matters, and what to test next.",
+      "Map metrics to a single funnel story: spend bands, lead quality, stage conversion, and channel mix. Build an executive KPI strip, trend views, drilldowns, and a short \"what changed\" narrative for the weekly readout.",
     proof:
-      "Designed to show marketing judgment, measurement fluency, and executive-friendly communication while keeping spend anonymized as $XXk per month or $XXX million.",
-    stack: ["SQL", "Tableau", "Power BI", "Salesforce", "GA4", "dbt"]
+      "Shows Tableau layout judgment, metric definitions, stakeholder-ready framing, and discipline around anonymized figures ($XXk / $XXX million) on a public portfolio.",
+    stack: ["SQL", "Tableau", "Salesforce", "GA4", "dbt", "Redshift"],
+    visual: {
+      kind: "tableau-dashboard",
+      caption:
+        "Concept wireframe for a weekly performance readout. Sample KPIs and campaign names are illustrative.",
+      kpis: [
+        { label: "Spend (MTD)", value: "$XXk" },
+        { label: "CPL", value: "$XXX" },
+        { label: "MQL → SQL", value: "XX%" },
+        { label: "Pipeline", value: "$X.XM" }
+      ],
+      weeklyNote:
+        "Paid search CPL up 8% WoW; two campaigns account for most of the lift. Social holding steady. Recommend pausing low-intent prospecting tests.",
+      campaigns: [
+        { name: "Brand Search", metric: "CPL $XX" },
+        { name: "Non-Brand Core", metric: "CPL $XXX" },
+        { name: "Retargeting", metric: "Conv. XX%" }
+      ]
+    }
   },
   {
     title: "SEO Agent Pipeline",
     category: "Agentic analytics",
     summary:
-      "A 10-stage SEO content pipeline with research, approval gates, and deploy-ready content operations.",
+      "Ten-stage SEO pipeline: research, briefs, drafting, QA, and publish steps with approval gates before anything ships.",
     problem:
-      "SEO content production gets slow when research, briefs, drafting, QA, and deployment are handled as disconnected manual steps.",
+      "SEO work stalls when research, briefs, drafts, and deployment live in different tools and nobody owns the handoffs.",
     approach:
-      "Break the workflow into explicit agent stages with human approval gates so the system can move quickly without losing editorial control.",
+      "Split the work into named stages. Agents handle research and drafts; humans approve briefs and final copy before deploy.",
     proof:
-      "Demonstrates practical agent orchestration, content operations, and marketing workflow design.",
+      "Shows orchestration, editorial control, and content ops design, not just a single prompt.",
     stack: ["Python", "Claude Code", "SEO", "Content Pipeline"],
-    href: "https://github.com/loganriebel/seo_agent_pipeline"
+    href: "https://github.com/loganriebel/seo_agent_pipeline",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Simplified stage map for the public repo pipeline.",
+      stages: [
+        { label: "Topic intake" },
+        { label: "SERP research" },
+        { label: "Brief", gate: true },
+        { label: "Draft" },
+        { label: "QA", gate: true },
+        { label: "Publish" }
+      ],
+      output: "Deploy-ready article package with brief, draft, and QA notes"
+    }
   },
   {
     title: "Meta Ads Agent",
     category: "Agentic analytics",
     summary:
-      "A Cursor agent playbook for Meta paid social creative, copy, testing, pruning, scaling, and learning loops.",
+      "Cursor playbook for Meta paid social: creative tests, copy variants, pruning, scaling, and a documented learning loop.",
     problem:
-      "Paid social optimization depends on repeatable testing discipline, but that discipline is easy to lose when creative and reporting move separately.",
+      "Paid social teams lose testing discipline when creative production and performance reporting are on different calendars.",
     approach:
-      "Codify paid social workflow stages so campaign analysis, creative iteration, and scaling decisions follow a consistent loop.",
+      "Encode analysis, creative iteration, prune/scale rules, and post-test notes as repeatable agent steps tied to account structure.",
     proof:
-      "Shows how paid media knowledge can be translated into an AI-assisted operating system.",
+      "Translates paid social judgment into a workflow others can run, not tribal knowledge in one person's inbox.",
     stack: ["Python", "Cursor", "Paid Social", "Workflow Design"],
-    href: "https://github.com/loganriebel/meta-ads-agent"
+    href: "https://github.com/loganriebel/meta-ads-agent",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Core loop from the Meta Ads Agent playbook.",
+      stages: [
+        { label: "Account snapshot" },
+        { label: "Creative test plan" },
+        { label: "Launch variants" },
+        { label: "Prune / scale", gate: true },
+        { label: "Learning log" }
+      ],
+      output: "Test plan, variant briefs, and scale/pause recommendations"
+    }
   },
   {
     title: "Competitor Intelligence Agent",
     category: "Agentic analytics",
     summary:
-      "A scheduled agent that monitors competitor sitemaps, scores new content against ICP relevance, and flags market changes.",
+      "Scheduled monitoring of competitor sitemaps with ICP scoring and prioritized alerts for content and positioning shifts.",
     problem:
-      "Competitor research is valuable but usually sporadic, making teams miss pricing, content, and positioning changes.",
+      "Competitor checks are ad hoc, so pricing, positioning, and new pages slip past until someone notices in a sales call.",
     approach:
-      "Monitor source changes on a schedule, score new pages, and convert findings into prioritized content and positioning ideas.",
+      "Crawl on a schedule, diff new URLs, score relevance to ICP, and surface a short ranked list for marketing and product marketing.",
     proof:
-      "Connects market monitoring, ICP thinking, and automated research into a repeatable GTM workflow.",
+      "Connects research automation to GTM prioritization, not a raw scrape dump.",
     stack: ["Python", "Automation", "Competitor Research", "Content Strategy"],
-    href: "https://github.com/loganriebel/competitor_intel_agent"
+    href: "https://github.com/loganriebel/competitor_intel_agent",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Monitor → score → alert flow.",
+      stages: [
+        { label: "Sitemap crawl" },
+        { label: "Diff new pages" },
+        { label: "ICP score" },
+        { label: "Rank & alert", gate: true }
+      ],
+      output: "Prioritized competitor changes with suggested responses"
+    }
   },
   {
     title: "Agentic Outbound Pipeline",
     category: "Agentic analytics",
     summary:
-      "A GTM workflow for researching accounts, shaping outreach, and bringing more structure to outbound motion.",
+      "Structured outbound: account research, fit reasoning, and draft outreach inputs reviewed before send.",
     problem:
-      "Outbound breaks down when research quality and message relevance are inconsistent across accounts.",
+      "Outbound quality swings with whoever wrote the account notes that week.",
     approach:
-      "Use agentic steps to gather context, reason about fit, and produce outreach inputs that can be reviewed before use.",
+      "Agent steps gather firmographics and signals, score fit, and draft messaging hooks for human edit before CRM export.",
     proof:
-      "Shows the bridge between marketing systems, sales motion, and applied AI workflow design.",
+      "Bridges marketing data habits with sales motion and governed human review.",
     stack: ["Python", "GTM", "Outbound", "AI Workflow"],
-    href: "https://github.com/loganriebel/agentic-outbound-pipeline"
+    href: "https://github.com/loganriebel/agentic-outbound-pipeline",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Research-to-outreach path with a required review step.",
+      stages: [
+        { label: "Account research" },
+        { label: "Fit scoring" },
+        { label: "Draft hooks", gate: true },
+        { label: "CRM export" }
+      ],
+      output: "Reviewed outreach brief per account"
+    }
   },
   {
     title: "Mako Metrics MCP",
     category: "Agentic analytics",
     summary:
-      "A public MCP registry listing for connecting governed analytics context to AI-assisted workflows.",
+      "MCP listing that exposes governed metric definitions so analytics agents query consistent numbers, not ad hoc SQL.",
     problem:
-      "Analytics agents need trusted metric definitions and controlled interfaces, not ad hoc access to scattered data.",
+      "AI tools on top of analytics break when every session reinvents metric logic.",
     approach:
-      "Expose analytics capabilities through an MCP-ready interface that can be discovered and used by AI tooling.",
+      "Publish metrics and safe query patterns through MCP so Claude and other clients use the same definitions as the BI layer.",
     proof:
-      "Demonstrates interest in governed metric access, analytics UX, and AI-native data products.",
+      "Signals interest in metric governance and AI-native analytics interfaces, not dashboard screenshots alone.",
     stack: ["MCP", "Analytics", "PowerShell", "AI Tooling"],
-    href: "https://github.com/loganriebel/mako-metrics-mcp"
+    href: "https://github.com/loganriebel/mako-metrics-mcp",
+    visual: {
+      kind: "agent-workflow",
+      caption: "How governed metrics reach an AI client.",
+      stages: [
+        { label: "Metric registry" },
+        { label: "MCP surface" },
+        { label: "Agent query" },
+        { label: "Validated answer", gate: true }
+      ],
+      output: "Answers grounded in defined metrics and filters"
+    }
   }
 ];
 

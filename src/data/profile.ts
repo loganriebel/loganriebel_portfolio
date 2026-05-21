@@ -7,24 +7,24 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/logan-riebel/",
   headshot: "/assets/headshot.jpg",
   summary:
-    "I build marketing analytics workflows that turn GTM data into action, combining governed data models, performance reporting, and agentic interfaces for non-technical teams.",
+    "I connect paid media, CRM, and funnel data into reporting and AI workflows so GTM teams can answer budget and pipeline questions without waiting on a spreadsheet rebuild.",
   heroBullets: [
-    "6+ years building marketing data infrastructure and GTM reporting systems",
-    "Experience across paid search, paid social, SEO, Salesforce, dbt, Tableau, Redshift, and BigQuery",
-    "Daily AI builder using Claude, Cursor, and agentic workflows to make analytics easier to self-serve"
+    "6+ years on marketing data infrastructure, Tableau/Power BI, and GTM reporting",
+    "Paid search, paid social, SEO, Salesforce, dbt, Redshift, and BigQuery in production",
+    "Builds Claude and Cursor workflows so non-technical teams can self-serve governed metrics"
   ],
   strengths: [
     {
       title: "Marketing analytics systems",
-      body: "Dashboards, models, and reporting layers that help GTM teams see performance across funnel stages and channels."
+      body: "SQL models, dashboards, and weekly reporting that tie channel spend to leads, pipeline, and conversion."
     },
     {
-      title: "Agentic GTM workflows",
-      body: "AI-assisted pipelines for SEO, competitor monitoring, outbound, and paid media operations."
+      title: "AI-assisted GTM workflows",
+      body: "Repeatable pipelines for SEO, competitor monitoring, outbound, and paid media with human review where it matters."
     },
     {
-      title: "Decision-ready measurement",
-      body: "Attribution, incrementality, media mix modeling, forecasting, and test design translated into clear business choices."
+      title: "Measurement for decisions",
+      body: "Attribution, incrementality, media mix modeling, and test design framed as what to scale, pause, or fix next."
     }
   ],
   skills: [
@@ -52,10 +52,10 @@ export const profile = {
       company: "ADP",
       period: "March 2022 - Present",
       bullets: [
-        "Designed an agentic analytics system using dbt, MetricFlow, and Claude MCP to answer paid media and pipeline questions on governed metrics.",
-        "Built Tableau performance marketing dashboards integrating Salesforce and paid media data, contributing to a 20% reduction in cost per lead.",
-        "Supported allocation decisions across $XXX million in annual digital ad spend through channel analysis, attribution, and modeling.",
-        "Implemented A/B testing infrastructure that improved paid search conversion rates by 30% through bid strategy optimization."
+        "Built a governed analytics layer with dbt, MetricFlow, and Claude MCP so paid media and pipeline questions run on consistent definitions.",
+        "Shipped Tableau performance marketing dashboards on Salesforce and paid media data; cost per lead fell 20%.",
+        "Informed allocation across $XXX million in annual digital spend using channel analysis, attribution, and modeling.",
+        "Ran A/B testing infrastructure for paid search bid strategies; conversion rates improved 30%."
       ]
     },
     {
@@ -63,9 +63,9 @@ export const profile = {
       company: "Dentsu / iProspect",
       period: "July 2021 - March 2022",
       bullets: [
-        "Developed incrementality testing and attribution models for major telecom paid search programs with $XXX million in annualized media investment.",
-        "Designed and conducted 50+ tests across bidding strategies, ad creative, landing pages, and audience targeting.",
-        "Led weekly reporting presentations for senior marketing stakeholders with clear channel performance narratives."
+        "Built incrementality and attribution models for telecom paid search at $XXX million in annualized media.",
+        "Ran 50+ tests on bidding, creative, landing pages, and audiences.",
+        "Led weekly reporting for senior marketing stakeholders with clear channel narratives."
       ]
     },
     {
@@ -73,9 +73,9 @@ export const profile = {
       company: "LR Marketing Analytics",
       period: "September 2020 - July 2021",
       bullets: [
-        "Built 20+ Power BI marketing dashboards for healthcare and software clients across prospect, opportunity, purchase, and nurture stages.",
-        "Analyzed $XXk per month to $XXXk per month in digital media investment while keeping client-specific spend private.",
-        "Overhauled Marketo lead scoring and automation pathways, contributing to a 25% lift from MQL to SQL in two months."
+        "Delivered 20+ Power BI dashboards for healthcare and software clients across prospect through nurture.",
+        "Sized and analyzed $XXk to $XXXk per month in digital media with client spend kept private on this site.",
+        "Reworked Marketo lead scoring and automation; MQL-to-SQL conversion rose 25% in two months."
       ]
     },
     {
@@ -83,9 +83,9 @@ export const profile = {
       company: "OpGo Marketing",
       period: "January 2020 - July 2021",
       bullets: [
-        "Created Power BI and Google Data Studio reporting across 20+ client advertising dashboards.",
-        "Consolidated recurring reports into Power BI Service, saving 5+ hours per week of manual export and spreadsheet work.",
-        "Managed and reported on $XXk per month in media across 25 client accounts."
+        "Built Power BI and Google Data Studio reporting for 20+ client ad accounts.",
+        "Moved recurring exports into Power BI Service and cut 5+ hours per week of manual spreadsheet work.",
+        "Managed and reported on $XXk per month in media across 25 accounts."
       ]
     }
   ]
