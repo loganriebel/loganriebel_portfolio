@@ -74,7 +74,7 @@ export default function RootLayout({
             {profile.name}
           </Link>
           <nav aria-label="Main navigation">
-            <Link href="/">Experience</Link>
+            <Link href="/#experience">Experience</Link>
             <Link href="/work">Work</Link>
             <a href={profile.linkedin}>LinkedIn</a>
             <a href={profile.github}>GitHub</a>
