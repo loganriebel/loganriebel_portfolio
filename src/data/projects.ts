@@ -155,9 +155,9 @@ export const projects: Project[] = [
     problem:
       "Competitor checks are ad hoc, so pricing, positioning, and new pages slip past until someone notices in a sales call.",
     approach:
-      "Crawl on a schedule, diff new URLs, score relevance to ICP, and surface a short ranked list for marketing and product marketing.",
+      "Crawl on a schedule, diff new URLs, score relevance to ICP, and surface a short ranked list for marketing, sales, and product marketing.",
     proof:
-      "Connects research automation to GTM prioritization, not a raw scrape dump.",
+      "Turns competitor moves into GTM action: a rival price increase becomes a head-to-head talking point for sales, feature or integration changes flag product opportunities, and marketing gets prioritized responses instead of a scrape dump.",
     stack: ["Python", "Hermes", "Automation", "Competitor Research", "Content Strategy"],
     href: "https://github.com/loganriebel/competitor_intel_agent",
     visual: {
