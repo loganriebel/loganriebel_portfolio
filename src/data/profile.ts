@@ -47,22 +47,16 @@ export const profile = {
     "Multi-Touch Attribution",
     "Incrementality Testing",
     "A/B Testing",
-    "Claude",
     "Claude Code",
     "Cursor",
     "Hermes",
-    "Next.js",
-    "Stripe",
-    "Automation",
     "Cold Email",
-    "Content Pipeline",
     "Competitor Research",
     "Content Strategy",
     "Competitive Intelligence",
     "Workflow Design",
     "GTM",
-    "AI Workflow",
-    "PDF Reports"
+    "AI Workflow"
   ],
   experience: [
     {
