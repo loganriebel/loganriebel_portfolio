@@ -27,7 +27,7 @@ export function ProjectCard({ project, featured = false }: Props) {
           <dd>{project.approach}</dd>
         </div>
         <div>
-          <dt>Shows</dt>
+          <dt>Outcomes</dt>
           <dd>{project.proof}</dd>
         </div>
       </dl>
