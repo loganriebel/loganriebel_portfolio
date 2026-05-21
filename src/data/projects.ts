@@ -117,14 +117,15 @@ export const projects: Project[] = [
     title: "Mako Metrics",
     category: "Agentic analytics",
     summary:
-      "Shipped product at makometrics.com: competitor Meta ad intelligence delivered as a brief-ready PDF, not another dashboard to maintain.",
+      "Meta ad intelligence delivered as a brief-ready PDF using AI insights and final human review, not another dashboard to maintain.",
     problem:
       "DTC and ecommerce teams waste hours scrolling Meta's Ad Library when they need angles for the next creative brief and test plan.",
     approach:
-      "Customer submits a competitor brief on Stripe. We pull public Ad Library data, score creative and copy patterns, and deliver a designed PDF with scorecards, hook rankings, and experiments to run within 24 hours.",
+      "Customer submits a competitor brief on Stripe. AI pulls and scores public Ad Library creative and copy patterns; a human reviews the read before we deliver a designed PDF with scorecards, hook rankings, and experiments to run within 24 hours.",
     proof:
       "Shows end-to-end product thinking: positioning, fulfillment workflow, report design, and turning public ad data into decisions a marketing team can act on.",
     stack: [
+      "Claude",
       "Meta Ad Library",
       "Competitive Intelligence",
       "PDF Reports",

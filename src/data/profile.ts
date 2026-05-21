@@ -43,6 +43,7 @@ export const profile = {
     "Multi-Touch Attribution",
     "Incrementality Testing",
     "A/B Testing",
+    "Claude",
     "Claude Code",
     "Cursor"
   ],
