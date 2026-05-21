@@ -25,7 +25,7 @@ export default function WorkPage() {
       <section className="section-shell page-hero">
         <p className="eyebrow">Portfolio work</p>
         <h1>
-          What you cannot see on GitHub: how I frame measurement and ship
+          What GitHub Doesn&apos;t Show: how I frame measurement and ship GTM
           workflows.
         </h1>
         <p>
@@ -73,11 +73,14 @@ export default function WorkPage() {
       <section className="section-shell">
         <div className="section-heading">
           <p className="eyebrow">Agentic analytics</p>
-          <h2>Repeatable GTM loops with review where it counts.</h2>
+          <h2>
+            Resilient, repeatable GTM loops that drive value and keep learning.
+          </h2>
           <p>
             SEO, paid social, competitor monitoring, outbound, and governed
-            metrics exposed to AI tools. Same pattern: explicit stages, human
-            approval on high-risk steps, linked repos for depth.
+            metrics exposed to AI tools. Each loop has explicit stages, human
+            review on high-risk steps, and a feedback step so the next run is
+            better than the last.
           </p>
         </div>
         <div className="project-grid">

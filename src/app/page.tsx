@@ -11,7 +11,7 @@ export default function Home() {
         <section className="hero section-shell">
           <div className="hero-copy">
             <p className="eyebrow">Marketing analytics + AI workflows</p>
-            <h1>GTM data should answer budget questions, not start a spreadsheet hunt.</h1>
+            <h1>I build GTM analytics systems that turn messy data into action.</h1>
             <p className="hero-summary">{profile.summary}</p>
             <div className="hero-actions" aria-label="Primary actions">
               <a className="button primary" href="#experience">
