@@ -114,16 +114,16 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "Mako Metrics",
+    title: "Mako Metrics: Competitor Meta Ads",
     category: "Agentic analytics",
     summary:
-      "Meta ad intelligence delivered as a brief-ready PDF using AI insights and final human review, not another dashboard to maintain.",
+      "A competitor Meta ad research tool: AI analyzes a rival's public Ad Library ads, a human reviews the read, and you get a brief-ready PDF, not another dashboard to maintain.",
     problem:
-      "DTC and ecommerce teams waste hours scrolling Meta's Ad Library when they need angles for the next creative brief and test plan.",
+      "Teams need to study a competitor's live Facebook and Instagram ads before a creative brief, but scrolling Meta's Ad Library for one brand is slow and easy to misread.",
     approach:
-      "Customer submits a competitor brief on Stripe. AI pulls and scores public Ad Library creative and copy patterns; a human reviews the read before we deliver a designed PDF with scorecards, hook rankings, and experiments to run within 24 hours.",
+      "The customer names the competitor on Stripe. AI pulls that brand's public Ad Library ads, scores creative and copy patterns, and a human checks the analysis before we deliver a PDF with scorecards, hook rankings, and test ideas for your account within 24 hours.",
     proof:
-      "Shows end-to-end product thinking: positioning, fulfillment workflow, report design, and turning public ad data into decisions a marketing team can act on.",
+      "Shows a shipped competitor intelligence product: clear positioning, fulfillment workflow, and turning a rival's ad library into briefs your team can run against them.",
     stack: [
       "Claude",
       "Meta Ad Library",
@@ -136,15 +136,15 @@ export const projects: Project[] = [
     hrefLabel: "See how Mako Metrics works",
     visual: {
       kind: "agent-workflow",
-      caption: "Done-for-you flow from makometrics.com (no self-serve dashboard).",
+      caption: "Competitor Ad Library → analysis → PDF (makometrics.com).",
       stages: [
-        { label: "Competitor brief" },
-        { label: "Ad Library analysis" },
-        { label: "Report build" },
-        { label: "PDF delivery", gate: true }
+        { label: "Name competitor" },
+        { label: "Rival Ad Library pull" },
+        { label: "AI + human review" },
+        { label: "Competitor PDF", gate: true }
       ],
       output:
-        "Competitive scorecard, hook leaderboard, and test ideas for the next brief"
+        "Rival ad scorecard, hook leaderboard, and tests to run on your ads"
     }
   },
   {
