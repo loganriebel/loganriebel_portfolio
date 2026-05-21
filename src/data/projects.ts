@@ -176,13 +176,13 @@ export const projects: Project[] = [
     title: "Agentic Cold Email Pipeline",
     category: "Agentic analytics",
     summary:
-      "Cold email outbound with AI: research the account, score fit, draft personalized first lines and hooks, then a human approves before anything hits the sequencer.",
+      "Automated cold email prep: AI builds ranked account lists with firmographics, drafts personalized first lines and hooks, and SDRs review before anything hits the sequencer.",
     problem:
-      "Cold email reply rates tank when every rep hand-researches accounts and writes from scratch, so messaging goes generic and pipeline depends on who had time that week.",
+      "SDRs lose selling time to manual list building, account research, and first-draft copy, so cold email quality swings with whoever had bandwidth that week.",
     approach:
-      "Agents pull firmographics and intent signals, score ICP fit, and draft cold email copy and angles. Reps review and edit before export to the sending tool or CRM so nothing goes out unapproved.",
+      "On a schedule, agents enrich accounts, score ICP fit, and draft cold email copy. SDRs get the list, firmographics, and draft angles in one place, edit what matters, and approve before export to the sending tool or CRM.",
     proof:
-      "More relevant cold email at scale: faster research, personalized hooks per account, and steadier reply potential without each rep rebuilding the same prep work.",
+      "Saves SDRs hours of prep each week so they can focus on selling: automated lists and research, personalized cold email per account, and steadier reply potential without rebuilding the same work by hand.",
     stack: ["Python", "Hermes", "Cold Email", "GTM", "AI Workflow"],
     href: "https://github.com/loganriebel/agentic-outbound-pipeline",
     visual: {
