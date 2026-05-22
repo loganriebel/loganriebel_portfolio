@@ -109,11 +109,11 @@ export const projects: Project[] = [
     title: "SEO Agent Pipeline",
     category: "Agentic analytics",
     summary:
-      "Ten-stage SEO pipeline: research, briefs, drafting, QA, and publish steps with approval gates before anything ships.",
+      "Ten-stage SEO pipeline: research, draft, QA, and publish steps with human-in-the-loop approval gates before anything ships.",
     problem:
       "SEO work stalls when research, briefs, drafts, and deployment live in different tools and nobody owns the handoffs.",
     approach:
-      "Split the work into named stages. Agents handle research and drafts; humans approve briefs and final copy before deploy. By staging each step, we never overwhelm Claude's context window.",
+      "Split the work into stages. Agents handle research and drafts and generate artifacts after each stage. Humans approve outputs before moving to the next stage and deploy. By staging each step, we never overwhelm Claude's context window.",
     proof:
       "Significantly increases velocity to publish high-ranking content while keeping brand voice and quality intact through human gates at brief and final review.",
     stack: ["Python", "Claude Code", "SEO", "Content Pipeline"],
