@@ -75,7 +75,7 @@ export const projects: Project[] = [
     summary:
       "dbt marts and MetricFlow Semantic Layer define CPL and ROAS once. Claude answers executive questions in plain English through MCP, in minutes instead of hours or days.",
     problem:
-      "Leadership asks for CPL, ROAS, or pipeline in the meeting, then waits on exports while paid media, Salesforce, and web data get reconciled. Each request pulls analytics off the roadmap.",
+      "Leadership asks for CPL, ROAS, or pipeline in the meeting, then waits on exports while paid media, Salesforce, and web data get reconciled. Each request pulls analytics off their roadmap.",
     approach:
       "Model paid media and Salesforce in dbt (staging, intermediate, marts). Define CPL, ROAS, and spend once in MetricFlow's semantic layer. Connect Claude to those definitions through the dbt MCP server so ad-hoc questions return the same numbers as reporting.",
     proof:
