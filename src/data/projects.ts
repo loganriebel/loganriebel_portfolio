@@ -70,6 +70,42 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "Claude on dbt Mart Tables",
+    category: "Agentic analytics",
+    summary:
+      "dbt marts and MetricFlow define CPL and ROAS once. Claude answers executive questions in plain English through MCP, in minutes instead of an ad-hoc queue.",
+    problem:
+      "Leadership asks for CPL, ROAS, or pipeline in the meeting, then waits on exports while paid media, Salesforce, and web data get reconciled. Each request pulls analytics off the roadmap.",
+    approach:
+      "Model paid media and Salesforce in dbt (staging, intermediate, marts). Define CPL, ROAS, and spend once in MetricFlow. Connect Claude to those definitions through the dbt MCP server so ad-hoc questions return the same numbers as reporting.",
+    proof:
+      "Executives get answers in minutes on questions like \"CPL by platform last quarter\" or \"campaigns with rising spend but flat pipeline.\" Ad-hoc volume drops, and analytics gets time back for roadmap work instead of spreadsheet rebuilds.",
+    stack: [
+      "dbt",
+      "MetricFlow",
+      "Claude",
+      "MCP",
+      "SQL",
+      "Salesforce",
+      "Paid Media",
+      "Redshift"
+    ],
+    href: "https://www.linkedin.com/pulse/agentic-analytics-getting-started-claude-top-dbt-logan-riebel-pwkmc/",
+    hrefLabel: "Read the LinkedIn article",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Paid media + SFDC → dbt mart → MetricFlow → Claude MCP.",
+      stages: [
+        { label: "Paid media + SFDC sources" },
+        { label: "dbt mart" },
+        { label: "MetricFlow metrics" },
+        { label: "Claude via MCP" }
+      ],
+      output:
+        "Plain-English CPL, ROAS, and pipeline reads that match reporting"
+    }
+  },
+  {
     title: "SEO Agent Pipeline",
     category: "Agentic analytics",
     summary:
