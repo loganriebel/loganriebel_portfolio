@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "Claude on dbt Mart Tables",
     category: "Agentic analytics",
     summary:
-      "dbt marts and MetricFlow Semantic Layer define CPL and ROAS once. Claude answers executive questions in plain English through MCP, in minutes instead of hours or days.",
+      "Media + CRM data staged in dbt mart tables. MetricFlow Semantic Layer defines metrics like CPL and ROAS once. Claude answers executive questions in plain English through MCP, in minutes instead of hours or days.",
     problem:
       "Leadership asks for CPL, ROAS, or pipeline in the meeting, then waits on exports while paid media, Salesforce, and web data get reconciled. Each request pulls analytics off their roadmap.",
     approach:
