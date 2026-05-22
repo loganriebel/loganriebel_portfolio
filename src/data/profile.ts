@@ -7,7 +7,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/logan-riebel/",
   headshot: "/assets/headshot.jpg",
   summary:
-    "I connect paid media, CRM, and funnel data into reporting and AI workflows so GTM teams can answer budget and pipeline questions without waiting on a spreadsheet rebuild.",
+    "I connect paid media, CRM, and funnel data into governed GTM reporting via Tableau. I then layer in agentic analytics so GTM teams get budget and pipeline answers without filing another ad-hoc request.",
   heroBullets: [
     "6+ years on marketing data infrastructure, Tableau/Power BI, and GTM reporting",
     "Paid search, paid social, SEO, Salesforce, dbt, Redshift, and BigQuery in production",
