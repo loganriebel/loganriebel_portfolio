@@ -376,6 +376,10 @@ main > .section-shell:last-of-type,
   padding: 0;
 }
 
+.page-hero + .work-guide {
+  padding-top: 0;
+}
+
 .work-guide-title {
   font-size: var(--text-card);
   margin-bottom: 0.75rem;
