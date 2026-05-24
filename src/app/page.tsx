@@ -45,7 +45,7 @@ export default function Home() {
       </div>
 
       <section className="section-shell split-section">
-        <div>
+        <div className="section-heading">
           <p className="eyebrow">What I build</p>
           <h2>Reporting and workflows tied to spend, pipeline, and tests.</h2>
         </div>
