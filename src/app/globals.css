@@ -11,6 +11,7 @@
   --text-display: clamp(1.875rem, 2.5vw + 0.75rem, 2.75rem);
   --text-section: clamp(1.5rem, 2.2vw + 0.5rem, 2.25rem);
   --text-card: clamp(1.15rem, 1.2vw + 0.85rem, 1.35rem);
+  --section-space: clamp(2rem, 5vw, 3rem);
 }
 
 * {
@@ -250,11 +251,14 @@ nav a:focus-visible {
   line-height: 1.45;
 }
 
-.split-section,
-.resume-section,
-.skills-section,
+.intro + .section-shell,
+main > .section-shell + .section-shell {
+  padding-top: var(--section-space);
+}
+
+main > .section-shell:last-of-type,
 .featured-work {
-  padding: clamp(4rem, 9vw, 8rem) 0;
+  padding-bottom: var(--section-space);
 }
 
 .split-section {
@@ -369,7 +373,7 @@ nav a:focus-visible {
 }
 
 .work-guide {
-  padding: 0 0 clamp(2rem, 5vw, 3rem);
+  padding: 0;
 }
 
 .work-guide-title {
@@ -645,7 +649,7 @@ nav a:focus-visible {
 .page-hero {
   display: grid;
   gap: clamp(0.65rem, 1.5dvh, 1rem);
-  padding: clamp(1.25rem, 3dvh, 2.5rem) 0 clamp(1rem, 2dvh, 1.75rem);
+  padding: clamp(1.25rem, 3dvh, 2.5rem) 0 0;
 }
 
 .page-hero p {
