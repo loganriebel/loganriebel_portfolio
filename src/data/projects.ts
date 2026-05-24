@@ -133,32 +133,6 @@ export const projects: Project[] = [
     }
   },
   {
-    title: "Meta Ads Agent",
-    category: "Agentic analytics",
-    summary:
-      "Cursor playbook for Meta paid social: creative tests, copy variants, pruning, scaling, and a documented learning loop.",
-    problem:
-      "Paid social teams lose testing discipline when creative production and performance reporting are on different calendars.",
-    approach:
-      "Encode analysis, creative iteration, prune/scale rules, and post-test notes as repeatable agent steps tied to account structure.",
-    proof:
-      "AI speeds up creative and copy testing, surfaces patterns a human might miss in the account data, captures what each test learned, and pushes budget toward winners so paid social tactics improve cycle over cycle.",
-    stack: ["Python", "Cursor", "Paid Social", "Workflow Design"],
-    href: "https://github.com/loganriebel/meta-ads-agent",
-    visual: {
-      kind: "agent-workflow",
-      caption: "Core loop from the Meta Ads Agent playbook.",
-      stages: [
-        { label: "Account snapshot" },
-        { label: "Creative test plan" },
-        { label: "Launch variants" },
-        { label: "Prune / scale", gate: true },
-        { label: "Learning log" }
-      ],
-      output: "Test plan, variant briefs, and scale/pause recommendations"
-    }
-  },
-  {
     title: "Mako Metrics: Meta Ads Competitor Spying",
     category: "Agentic analytics",
     summary:
@@ -241,6 +215,32 @@ export const projects: Project[] = [
         { label: "Sequencer / CRM" }
       ],
       output: "Approved cold email copy and hooks per account"
+    }
+  },
+  {
+    title: "Meta Ads Agent",
+    category: "Agentic analytics",
+    summary:
+      "Cursor playbook for Meta paid social: creative tests, copy variants, pruning, scaling, and a documented learning loop.",
+    problem:
+      "Paid social teams lose testing discipline when creative production and performance reporting are on different calendars.",
+    approach:
+      "Encode analysis, creative iteration, prune/scale rules, and post-test notes as repeatable agent steps tied to account structure.",
+    proof:
+      "AI speeds up creative and copy testing, surfaces patterns a human might miss in the account data, captures what each test learned, and pushes budget toward winners so paid social tactics improve cycle over cycle.",
+    stack: ["Python", "Cursor", "Paid Social", "Workflow Design"],
+    href: "https://github.com/loganriebel/meta-ads-agent",
+    visual: {
+      kind: "agent-workflow",
+      caption: "Core loop from the Meta Ads Agent playbook.",
+      stages: [
+        { label: "Account snapshot" },
+        { label: "Creative test plan" },
+        { label: "Launch variants" },
+        { label: "Prune / scale", gate: true },
+        { label: "Learning log" }
+      ],
+      output: "Test plan, variant briefs, and scale/pause recommendations"
     }
   }
 ];
