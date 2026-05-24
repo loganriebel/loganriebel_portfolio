@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Lato } from "next/font/google";
 import Link from "next/link";
 import { PersonSchema } from "@/components/PersonSchema";
 import "./globals.css";
 import { profile } from "@/data/profile";
 import { siteUrl } from "@/lib/site";
 
-const montserrat = Montserrat({
+const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "700", "900"],
   variable: "--font-sans",
   display: "swap"
 });
@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.variable}>
+      <body className={lato.variable}>
         <PersonSchema />
         <a className="skip-link" href="#main">
           Skip to content
