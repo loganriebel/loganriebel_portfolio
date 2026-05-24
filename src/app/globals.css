@@ -714,9 +714,9 @@ main > .section-shell:last-of-type,
   }
 
   .hero {
-    align-items: start;
+    align-items: stretch;
     gap: 0.5rem 1rem;
-    grid-template-columns: minmax(108px, 32vw) minmax(0, 1fr);
+    grid-template-columns: minmax(118px, 36vw) minmax(0, 1fr);
     grid-template-rows: auto auto auto auto;
     min-height: auto;
     padding: 1rem 0 0.5rem;
@@ -771,17 +771,24 @@ main > .section-shell:last-of-type,
   }
 
   .portrait-card {
-    align-self: start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
     grid-column: 1;
     grid-row: 1 / span 2;
-    justify-self: start;
+    justify-self: stretch;
     max-width: none;
     width: 100%;
   }
 
   .portrait-card img {
-    aspect-ratio: auto;
-    max-height: min(148px, 20dvh);
+    flex: 1 1 auto;
+    height: 100%;
+    max-height: none;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
   }
 
   .portrait-card div {
