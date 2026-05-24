@@ -25,7 +25,7 @@ body {
     radial-gradient(circle at top left, rgba(47, 93, 80, 0.16), transparent 34rem),
     linear-gradient(135deg, rgba(216, 205, 187, 0.42) 0 1px, transparent 1px 18px),
     var(--paper);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-sans), sans-serif;
 }
 
 a {
@@ -43,10 +43,10 @@ h1,
 h2,
 h3 {
   color: var(--ink);
-  font-family: var(--font-display), serif;
+  font-family: var(--font-sans), sans-serif;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.98;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
   margin: 0;
 }
 
@@ -561,7 +561,7 @@ nav a:focus-visible {
 
 .workflow-node strong {
   color: var(--ink);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0;

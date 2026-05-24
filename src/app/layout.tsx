@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Link from "next/link";
 import { PersonSchema } from "@/components/PersonSchema";
 import "./globals.css";
 import { profile } from "@/data/profile";
 import { siteUrl } from "@/lib/site";
 
-const display = Fraunces({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap"
-});
-
-const body = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-body",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-sans",
   display: "swap"
 });
 
@@ -64,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${display.variable} ${body.variable}`}>
+      <body className={montserrat.variable}>
         <PersonSchema />
         <a className="skip-link" href="#main">
           Skip to content
