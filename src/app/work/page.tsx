@@ -29,9 +29,9 @@ export default function WorkPage() {
           workflows.
         </h1>
         <p>
-          In about a minute you should see two things: judgment on marketing
-          analytics problems (dashboards, metrics, anonymized spend) and how I
-          turn repeat GTM work into AI-assisted systems with clear human gates.
+          On this page you should see two things: judgment on marketing analytics
+          problems and how I turn repeat GTM work into AI-assisted systems with
+          clear human gates.
         </p>
       </section>
 
@@ -39,16 +39,12 @@ export default function WorkPage() {
         <h2 className="work-guide-title">How to read this page</h2>
         <ul className="work-guide-list">
           <li>
-            <strong>Marketing analytics</strong> — problem framing, Tableau
-            wireframes, and decision narratives. Spend is masked on purpose.
+            <strong>Marketing analytics</strong> — problem framing and decision
+            narratives.
           </li>
           <li>
             <strong>Agentic analytics</strong> — stage maps and repos. Each card
             links to code when it exists.
-          </li>
-          <li>
-            <strong>Wireframes</strong> — concept layouts, not production
-            screenshots or client data.
           </li>
         </ul>
       </section>
