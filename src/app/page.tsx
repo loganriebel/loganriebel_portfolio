@@ -94,7 +94,16 @@ export default function Home() {
         </div>
         <div className="tag-list large" aria-label="Skills">
           {profile.skills.map((skill) => (
-            <span key={skill}>{skill}</span>
+            <span
+              key={skill}
+              className={
+                profile.mobileHiddenSkills.includes(skill)
+                  ? "skill-mobile-hidden"
+                  : undefined
+              }
+            >
+              {skill}
+            </span>
           ))}
         </div>
       </section>

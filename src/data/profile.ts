@@ -54,6 +54,16 @@ export const profile = {
     "GTM Workflows",
     "AI Workflows"
   ],
+  mobileHiddenSkills: [
+    "Power BI",
+    "Redshift",
+    "BigQuery",
+    "Hermes",
+    "Competitor Research",
+    "Content Strategy",
+    "SA360",
+    "dbt"
+  ],
   experience: [
     {
       role: "Marketing Analytics Manager",

@@ -715,11 +715,11 @@ main > .section-shell:last-of-type,
 
   .hero {
     align-items: start;
-    gap: 0.85rem 1rem;
+    gap: 0.5rem 1rem;
     grid-template-columns: minmax(108px, 32vw) minmax(0, 1fr);
     grid-template-rows: auto auto auto auto;
     min-height: auto;
-    padding: 1rem 0 0.75rem;
+    padding: 1rem 0 0.5rem;
   }
 
   .hero-copy {
@@ -727,7 +727,7 @@ main > .section-shell:last-of-type,
   }
 
   .hero .eyebrow {
-    align-self: end;
+    align-self: start;
     grid-column: 2;
     grid-row: 1;
   }
@@ -745,6 +745,7 @@ main > .section-shell:last-of-type,
     grid-column: 1 / -1;
     grid-row: 3;
     line-height: 1.55;
+    margin-top: 0.15rem;
     max-width: none;
   }
 
@@ -770,6 +771,7 @@ main > .section-shell:last-of-type,
   }
 
   .portrait-card {
+    align-self: start;
     grid-column: 1;
     grid-row: 1 / span 2;
     justify-self: start;
@@ -778,20 +780,16 @@ main > .section-shell:last-of-type,
   }
 
   .portrait-card img {
-    max-height: min(168px, 22dvh);
+    aspect-ratio: auto;
+    max-height: min(148px, 20dvh);
   }
 
   .portrait-card div {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.15rem;
-    padding: 0.55rem 0.65rem;
+    display: none;
   }
 
-  .portrait-card span,
-  .portrait-card strong {
-    font-size: 0.78rem;
-    line-height: 1.3;
+  .skill-mobile-hidden {
+    display: none;
   }
 
   .proof-strip {
