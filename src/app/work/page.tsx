@@ -33,20 +33,19 @@ export default function WorkPage() {
           problems and how I turn repeat GTM work into AI-assisted systems with
           clear human gates.
         </p>
-      </section>
-
-      <section className="section-shell work-guide">
-        <h2 className="work-guide-title">How to read this page</h2>
-        <ul className="work-guide-list">
-          <li>
-            <strong>Marketing analytics</strong> — problem framing and decision
-            narratives.
-          </li>
-          <li>
-            <strong>Agentic analytics</strong> — stage maps and repos. Each card
-            links to code when it exists.
-          </li>
-        </ul>
+        <div className="work-guide">
+          <h2 className="work-guide-title">How to read this page</h2>
+          <ul className="work-guide-list">
+            <li>
+              <strong>Marketing analytics</strong> — problem framing and decision
+              narratives.
+            </li>
+            <li>
+              <strong>Agentic analytics</strong> — stage maps and repos. Each card
+              links to code when it exists.
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section className="section-shell">
