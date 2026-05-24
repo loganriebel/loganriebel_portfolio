@@ -342,6 +342,11 @@ nav a:focus-visible {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.featured-work .project-grid.featured {
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .project-grid:not(.featured) {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -804,6 +809,7 @@ nav a:focus-visible {
   .timeline-item,
   .strength-grid,
   .featured,
+  .featured-work .project-grid.featured,
   .project-grid:not(.featured) {
     grid-template-columns: 1fr;
   }
