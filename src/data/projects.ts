@@ -136,13 +136,13 @@ export const projects: Project[] = [
     title: "Mako Metrics: Meta Ads Competitor Spying",
     category: "Agentic analytics",
     summary:
-      "A competitor Meta ad research tool: AI analyzes a rival's public Ad Library ads, a human reviews the read, and you get a brief-ready PDF plus a full ad catalog of every rival asset—creative, copy, CTAs, and more.",
+      "Competitor Meta ad research: AI reads a rival's public Ad Library, a human reviews the analysis, and you get a brief-ready PDF plus an ad catalog with their creatives, copy, and CTAs.",
     problem:
       "Teams need to study a competitor's live Facebook and Instagram ads before a creative brief, but scrolling Meta's Ad Library for one brand is slow and easy to misread.",
     approach:
-      "The customer names the competitor on Stripe. AI pulls that brand's Ad Library data, scores creative and copy patterns, and a human checks the analysis before we deliver a brief-ready PDF with scorecards, hook rankings, and test ideas, plus an ad catalog with every competitor ad asset, within 24 hours.",
+      "The customer names the competitor on Stripe. We pull that brand's Ad Library, score creative and copy patterns, and a human checks the read before delivery. Within 24 hours you get a brief-ready PDF with scorecards, hook rankings, and test ideas, plus an ad catalog of every ad asset we found.",
     proof:
-      "Shows a shipped competitor intelligence product: clear positioning, fulfillment workflow, and turning a rival's ad library into a brief-ready PDF and ad catalog your team can run against them.",
+      "A shipped product with a simple checkout and a clear deliverable: a brief-ready PDF and an ad catalog your team can use before they write the creative brief.",
     stack: [
       "Python",
       "Claude",
@@ -156,15 +156,15 @@ export const projects: Project[] = [
     hrefLabel: "See how Mako Metrics works",
     visual: {
       kind: "agent-workflow",
-      caption: "Competitor Ad Library → analysis → PDF + ad catalog (makometrics.com).",
+      caption: "Competitor Ad Library → analysis → PDF + Ad Catalog (makometrics.com).",
       stages: [
         { label: "Name competitor" },
         { label: "Rival Ad Library pull" },
         { label: "AI + human review" },
-        { label: "PDF + ad catalog", gate: true }
+        { label: "Ad Catalog", gate: true }
       ],
       output:
-        "Brief-ready PDF, full ad catalog with every rival asset, and tests to run on your ads"
+        "Brief-ready PDF, ad catalog with every rival asset, and tests to run on your ads"
     }
   },
   {
