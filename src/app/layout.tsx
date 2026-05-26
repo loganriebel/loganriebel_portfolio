@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import Link from "next/link";
 import { PersonSchema } from "@/components/PersonSchema";
+import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 import { profile } from "@/data/profile";
 import { siteUrl } from "@/lib/site";
@@ -63,17 +64,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <header className="site-header">
-          <Link className="brand" href="/">
-            {profile.name}
-          </Link>
-          <nav aria-label="Main navigation">
-            <Link href="/#experience">Experience</Link>
-            <Link href="/work">Work</Link>
-            <a href={profile.linkedin}>LinkedIn</a>
-            <a href={profile.github}>GitHub</a>
-          </nav>
-        </header>
+        <SiteHeader />
         <main id="main">{children}</main>
         <footer className="site-footer">
           <div>
