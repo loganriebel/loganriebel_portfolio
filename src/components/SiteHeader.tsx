@@ -56,7 +56,7 @@ export function SiteHeader() {
 
   return (
     <header className={headerClass}>
-      <div className="site-header-inner">
+      <div className="site-header-bar">
         <Link className="brand" href="/" onClick={closeMenu}>
           {profile.name}
         </Link>
@@ -73,31 +73,31 @@ export function SiteHeader() {
           <span />
           <span />
         </button>
-
-        <nav
-          id="site-nav"
-          className={menuOpen ? "is-open" : undefined}
-          aria-label="Main navigation"
-        >
-          <Link href="/#experience" onClick={closeMenu}>
-            Experience
-          </Link>
-          <Link
-            href="/work"
-            onClick={closeMenu}
-            aria-current={isWorkPage ? "page" : undefined}
-            className={isWorkPage ? "is-active" : undefined}
-          >
-            Work
-          </Link>
-          <a href={profile.linkedin} onClick={closeMenu}>
-            LinkedIn
-          </a>
-          <a href={profile.github} onClick={closeMenu}>
-            GitHub
-          </a>
-        </nav>
       </div>
+
+      <nav
+        id="site-nav"
+        className={menuOpen ? "is-open" : undefined}
+        aria-label="Main navigation"
+      >
+        <Link href="/#experience" onClick={closeMenu}>
+          Experience
+        </Link>
+        <Link
+          href="/work"
+          onClick={closeMenu}
+          aria-current={isWorkPage ? "page" : undefined}
+          className={isWorkPage ? "is-active" : undefined}
+        >
+          Work
+        </Link>
+        <a href={profile.linkedin} onClick={closeMenu}>
+          LinkedIn
+        </a>
+        <a href={profile.github} onClick={closeMenu}>
+          GitHub
+        </a>
+      </nav>
     </header>
   );
 }
