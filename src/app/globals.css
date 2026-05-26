@@ -107,17 +107,12 @@ li {
 }
 
 .site-header {
-  align-items: center;
   backdrop-filter: blur(12px);
   background: rgba(255, 250, 241, 0.78);
   border: 1px solid var(--line);
   border-radius: 999px;
   box-shadow: 0 8px 32px rgba(33, 42, 35, 0.08);
-  display: flex;
-  height: var(--header-height);
-  justify-content: space-between;
   left: 50%;
-  padding: 0 1.25rem;
   position: fixed;
   top: var(--header-top);
   transform: translateX(-50%);
@@ -125,12 +120,68 @@ li {
     background 0.3s ease,
     box-shadow 0.3s ease;
   width: min(1180px, calc(100% - 40px));
-  z-index: 100;
+  z-index: 1000;
 }
 
 .site-header.is-scrolled {
   background: rgba(255, 250, 241, 0.92);
   box-shadow: 0 12px 40px rgba(33, 42, 35, 0.14);
+}
+
+.site-header-inner {
+  align-items: center;
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  position: relative;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  height: 44px;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 44px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background: rgba(47, 93, 80, 0.08);
+  outline: none;
+}
+
+.nav-toggle span {
+  background: var(--accent-strong);
+  display: block;
+  height: 2px;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 24px;
+}
+
+.nav-toggle.is-active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+body.nav-menu-open {
+  overflow: hidden;
 }
 
 main {
@@ -171,7 +222,7 @@ nav a:focus-visible {
   background: rgba(255, 250, 241, 0.68);
 }
 
-nav a.is-active {
+.site-header nav a.is-active {
   border-color: var(--line);
   background: rgba(47, 93, 80, 0.12);
   color: var(--accent-strong);
@@ -719,23 +770,70 @@ main > .section-shell:last-of-type,
   }
 
   :root {
-    --header-top: 0.65rem;
-    --header-height: 3.35rem;
+    --header-top: 0;
+    --header-height: 3.5rem;
   }
 
   .site-header {
-    padding: 0 0.85rem;
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+    border-top: none;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .site-header.is-scrolled {
+    background: rgba(255, 250, 241, 0.92);
+    box-shadow: 0 12px 40px rgba(33, 42, 35, 0.14);
+  }
+
+  .site-header-inner {
+    padding: 0;
+    width: min(1180px, calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
   }
 
   .site-header nav {
-    flex-wrap: nowrap;
-    gap: 0.35rem;
+    display: none;
+    position: fixed;
+    top: var(--header-offset);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 1rem 1.25rem 1.5rem;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 250, 241, 0.92);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 12px 32px rgba(33, 42, 35, 0.12);
+    max-height: calc(100dvh - var(--header-offset));
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .site-header nav.is-open {
+    display: flex;
   }
 
   .site-header nav a {
-    font-size: 0.88rem;
-    padding: 0.4rem 0.55rem;
-    white-space: nowrap;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    white-space: normal;
+    width: 100%;
+  }
+
+  .site-header nav a:hover,
+  .site-header nav a:focus-visible {
+    background: rgba(47, 93, 80, 0.08);
   }
 
   .intro {
@@ -884,32 +982,14 @@ main > .section-shell:last-of-type,
 }
 
 @media (max-width: 560px) {
-  :root {
-    --header-top: 0.5rem;
-    --header-height: 3.1rem;
-  }
-
-  .site-header,
+  .site-header-inner,
   .site-footer,
   .section-shell {
     width: min(100% - 28px, 1180px);
   }
 
-  .site-header {
-    padding: 0 0.65rem;
-  }
-
   .site-header .brand {
-    font-size: 0.92rem;
-  }
-
-  .site-header nav {
-    gap: 0.25rem;
-  }
-
-  .site-header nav a {
-    font-size: 0.82rem;
-    padding: 0.35rem 0.45rem;
+    font-size: 0.95rem;
   }
 
   .proof-strip p {
