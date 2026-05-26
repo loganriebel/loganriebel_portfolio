@@ -245,4 +245,7 @@ export const projects: Project[] = [
   }
 ];
 
-export const featuredProjects = projects.slice(0, 3);
+export const featuredProjects = [
+  ...projects.slice(0, 3),
+  projects.find((p) => p.title.startsWith("Mako Metrics"))!,
+];

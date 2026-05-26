@@ -119,9 +119,17 @@ export default function Home() {
           </Link>
         </div>
         <div className="project-grid featured">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+          {featuredProjects.map((project) => {
+            const isDesktopOnly = project.title.startsWith("Mako Metrics");
+            return (
+              <div
+                key={project.title}
+                className={isDesktopOnly ? "project-desktop-only" : undefined}
+              >
+                <ProjectCard project={project} />
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

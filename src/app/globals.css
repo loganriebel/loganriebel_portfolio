@@ -799,6 +799,10 @@ main > .section-shell:last-of-type,
     display: none;
   }
 
+  .project-desktop-only {
+    display: none;
+  }
+
   .proof-strip {
     border-block: none;
     border-left: 2px solid var(--accent);
