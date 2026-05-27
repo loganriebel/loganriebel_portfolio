@@ -53,9 +53,9 @@ export default function WorkPage() {
           <p className="eyebrow">Marketing analytics</p>
           <h2>From messy inputs to a weekly decision.</h2>
           <p>
-            Repos show code. These pieces show how I define metrics, lay out a
-            dashboard, and write the story leadership actually uses in a budget
-            meeting.
+            These pieces show how I define metrics, lay out a Tableau dashboard,
+            and surface the quick insights and next tests leadership actually
+            uses to make strategic media decisions.
           </p>
         </div>
         <div className="project-grid project-grid-featured">

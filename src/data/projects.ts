@@ -35,11 +35,11 @@ export const projects: Project[] = [
     summary:
       "Wireframe-first Tableau case study: weekly paid media and CRM reporting for budget and funnel decisions, with anonymized spend.",
     problem:
-      "Paid media, Salesforce, and web analytics rarely line up in one view. Leadership asks for CPL and pipeline in the same meeting where the team is still reconciling exports.",
+      "Web analytics, paid media platforms, and CRM outcomes each live in their own tool, so teams end up juggling five disconnected sources of truth. There is no single place to see how a click turned into a lead and whether that lead became pipeline, which means every question to leadership starts with exporting and stitching spreadsheets by hand.",
     approach:
-      "Map metrics to a single funnel story: spend bands, lead quality, stage conversion, and channel mix. Build an executive KPI strip, trend views, drilldowns, and a short \"what changed\" narrative for the weekly readout.",
+      "Model Paid Search, Paid Social, GA4, and Salesforce data in dbt on Redshift so every channel reports against one funnel definition in SQL. Lay out Tableau so a weekly scan compares channels side by side and surfaces the next test worth running: audience cuts, creative angles, landing pages, or channel mix.",
     proof:
-      "Connects paid media, web, and CRM data in one Tableau view so teams see how channels are performing, what is driving pipeline, and where to shift budget to improve CAC. The data surfaces where the highest-opportunity tests are.",
+      "A connected view turns the weekly scan into a short list of specific tests worth running next: which creative is fatiguing, which audiences convert, where to shift mix. Each test closes out and feeds the next week's read.",
     stack: [
       "SQL",
       "Tableau",
