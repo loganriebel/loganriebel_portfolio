@@ -15,6 +15,8 @@ export type AgentWorkflowVisual = {
 
 export type ProjectVisual = TableauDashboardVisual | AgentWorkflowVisual;
 
+export type ProjectLink = { href: string; label: string };
+
 export type Project = {
   title: string;
   category: "Marketing analytics" | "Agentic analytics";
@@ -25,6 +27,8 @@ export type Project = {
   stack: string[];
   href?: string;
   hrefLabel?: string;
+  // Takes precedence over href when present.
+  links?: ProjectLink[];
   visual?: ProjectVisual;
 };
 
@@ -221,26 +225,40 @@ export const projects: Project[] = [
     title: "Meta Ads Agent",
     category: "Agentic analytics",
     summary:
-      "Cursor playbook for Meta paid social: creative tests, copy variants, pruning, scaling, and a documented learning loop.",
+      "A nine-stage agent for Meta paid social. It researches angles, writes the copy, generates the images, screens every creative against ad policy, and publishes through a guarded proxy, then writes results back so the next sprint is briefed by the last one.",
     problem:
-      "Paid social teams lose testing discipline when creative production and performance reporting are on different calendars.",
+      "Paid social only improves by testing, but creative production, copy, and policy review move slower than the budget burns, so accounts keep running the same few ads until they fatigue. The obvious fix is to point AI at the ad account, and that is exactly how teams end up with nuked campaigns or an account stuck in Meta's learning phase.",
     approach:
-      "Encode analysis, creative iteration, prune/scale rules, and post-test notes as repeatable agent steps tied to account structure.",
+      "Nine stages, each writing a file the next one reads: research, copy, image prompts, generated assets, policy screening, publish, performance read, budget actions, brief update. A human approves every transition. The agent never touches the Meta API directly; writes pass through a proxy that holds the token, forces a paused state, and caps budget, so a bad decision cannot spend money. Kill and scale rules follow how Meta delivery actually works: an impression floor and a Bayesian comparison against the ad set before anything is paused, ad-level pauses only, structural changes batched weekly, and no raw CTR sorts. Every batch reserves 20 to 30 percent of its slots to test outside the known winners so the loop does not converge on one idea.",
     proof:
-      "AI speeds up creative and copy testing, surfaces patterns a human might miss in the account data, captures what each test learned, and pushes budget toward winners so paid social tactics improve cycle over cycle.",
-    stack: ["Python", "Cursor", "Paid Social", "Workflow Design"],
-    href: "https://github.com/loganriebel/meta-ads-agent",
+      "Creative production stops being the bottleneck: a sprint goes from research to policy-screened, UTM-tagged, publish-ready variants in a single session. The kill and scale logic is written down and auditable instead of living in one person's Ads Manager, and every result feeds a patterns file that briefs the next sprint.",
+    stack: [
+      "Claude Code",
+      "Python",
+      "Meta Marketing API",
+      "fal.ai",
+      "Supabase",
+      "Paid Social",
+      "Workflow Design"
+    ],
+    links: [
+      { href: "https://makometrics.com/meta-ads-agent", label: "Try the live demo" },
+      { href: "https://github.com/loganriebel/meta-ads-agent", label: "Open GitHub repo" }
+    ],
     visual: {
       kind: "agent-workflow",
-      caption: "Core loop from the Meta Ads Agent playbook.",
+      caption:
+        "Simplified stage map. A human approves every transition, and all Meta writes go through the guarded proxy.",
       stages: [
-        { label: "Account snapshot" },
-        { label: "Creative test plan" },
-        { label: "Launch variants" },
-        { label: "Prune / scale", gate: true },
-        { label: "Learning log" }
+        { label: "Research angles" },
+        { label: "Copy + image briefs" },
+        { label: "Generate creatives" },
+        { label: "Policy screen", gate: true },
+        { label: "Publish via proxy", gate: true },
+        { label: "Analyze → write back" }
       ],
-      output: "Test plan, variant briefs, and scale/pause recommendations"
+      output:
+        "Policy-screened, UTM-tagged ad variants plus the winners file that briefs the next sprint"
     }
   }
 ];

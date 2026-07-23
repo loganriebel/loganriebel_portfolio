@@ -221,6 +221,12 @@ nav a,
   font-weight: 700;
 }
 
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 nav a {
   border: 1px solid transparent;
   border-radius: 999px;

@@ -36,7 +36,21 @@ export function ProjectCard({ project, featured = false }: Props) {
           <span key={item}>{item}</span>
         ))}
       </div>
-      {project.href ? (
+      {project.links?.length ? (
+        <div className="card-links">
+          {project.links.map((link) => (
+            <a
+              key={link.href}
+              className="text-link"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      ) : project.href ? (
         <a
           className="text-link"
           href={project.href}
