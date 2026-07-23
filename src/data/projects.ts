@@ -225,13 +225,13 @@ export const projects: Project[] = [
     title: "Meta Ads Agent",
     category: "Agentic analytics",
     summary:
-      "A nine-stage agent for Meta paid social. It researches angles, writes the copy, generates the images, screens every creative against ad policy, and publishes through a guarded proxy, then writes results back so the next sprint is briefed by the last one.",
+      "Nine-stage agent for Meta paid social: research, copy, generated creative, policy screening, then publish through a proxy that can't spend money. Results write back, so each sprint starts from the last one's data.",
     problem:
-      "Paid social only improves by testing, but creative production, copy, and policy review move slower than the budget burns, so accounts keep running the same few ads until they fatigue. The obvious fix is to point AI at the ad account, and that is exactly how teams end up with nuked campaigns or an account stuck in Meta's learning phase.",
+      "Testing is what improves paid social, but creative and policy review move slower than the budget burns, so accounts run the same few ads until they fatigue. Point an AI at the account and the failure mode gets worse: nuked campaigns, or an account stuck in learning phase.",
     approach:
-      "Nine stages, each writing a file the next one reads: research, copy, image prompts, generated assets, policy screening, publish, performance read, budget actions, brief update. A human approves every transition. The agent never touches the Meta API directly; writes pass through a proxy that holds the token, forces a paused state, and caps budget, so a bad decision cannot spend money. Kill and scale rules follow how Meta delivery actually works: an impression floor and a Bayesian comparison against the ad set before anything is paused, ad-level pauses only, structural changes batched weekly, and no raw CTR sorts. Every batch reserves 20 to 30 percent of its slots to test outside the known winners so the loop does not converge on one idea.",
+      "Nine stages, each writing a file the next reads. A human approves every handoff. The agent never touches the Meta API: writes go through a proxy that holds the token, forces everything paused, and caps budget. Killing an ad takes an impression floor and a Bayesian read against the ad set, never a raw CTR sort. Part of every batch tests outside the known winners.",
     proof:
-      "Creative production stops being the bottleneck: a sprint goes from research to policy-screened, UTM-tagged, publish-ready variants in a single session. The kill and scale logic is written down and auditable instead of living in one person's Ads Manager, and every result feeds a patterns file that briefs the next sprint.",
+      "One session takes a sprint from research to policy-screened, UTM-tagged variants ready to publish. Kill and scale rules live in version control instead of one person's Ads Manager, and every result feeds the patterns file that briefs the next sprint.",
     stack: [
       "Claude Code",
       "Python",
@@ -248,7 +248,7 @@ export const projects: Project[] = [
     visual: {
       kind: "agent-workflow",
       caption:
-        "Simplified stage map. A human approves every transition, and all Meta writes go through the guarded proxy.",
+        "Simplified stage map. A human approves every transition, and every Meta write goes through the proxy.",
       stages: [
         { label: "Research angles" },
         { label: "Copy + image briefs" },
