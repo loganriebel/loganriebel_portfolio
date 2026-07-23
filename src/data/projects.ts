@@ -172,6 +172,46 @@ export const projects: Project[] = [
     }
   },
   {
+    title: "Meta Ads Agent",
+    category: "Agentic analytics",
+    summary:
+      "Nine-stage agent for Meta Paid Social: research, copy, generated creative, policy screening, then publish through a proxy that can't burn your whole budget. Results write back, so each sprint starts with learnings from the latest data.",
+    problem:
+      "Paid social improves by testing. But creative and policy review move slower than the budget burns, so accounts run the same few ads until they fatigue. Point an AI at the account and the failure mode gets worse: nuked campaigns, or an account stuck in learning phase.",
+    approach:
+      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Kill and scale calls gate on conversion volume and an A/B significance test, never impressions and never a raw CTR sort. Each batch reserves 20-30% of its slots for untested angles.",
+    proof:
+      "One session takes a sprint from research to brand-safe creative packaged in a campaign that's ready to publish. Kill and scale rules live in documentation instead of one person's head. Every result feeds the recursive loop and briefs the next sprint.",
+    stack: [
+      "Claude Code",
+      "Python",
+      "Meta Marketing API",
+      "fal.ai",
+      "Supabase",
+      "Paid Social",
+      "Workflow Design"
+    ],
+    links: [
+      { href: "https://makometrics.com/meta-ads-agent", label: "Try the Live Demo" },
+      { href: "https://github.com/loganriebel/meta-ads-agent", label: "Open GitHub repo" }
+    ],
+    visual: {
+      kind: "agent-workflow",
+      caption:
+        "Simplified stage map. A human approves every transition, and every Meta write goes through the proxy.",
+      stages: [
+        { label: "Research angles" },
+        { label: "Copy + image briefs" },
+        { label: "Generate creatives" },
+        { label: "Policy screen", gate: true },
+        { label: "Publish via proxy", gate: true },
+        { label: "Analyze → write back" }
+      ],
+      output:
+        "Brand-safe ad variants with automated campaign build. Winning ads brief the next batch of creative and copy."
+    }
+  },
+  {
     title: "Competitor Intelligence Agent",
     category: "Agentic analytics",
     summary:
@@ -219,46 +259,6 @@ export const projects: Project[] = [
         { label: "Sequencer / CRM" }
       ],
       output: "Approved cold email copy and hooks per account"
-    }
-  },
-  {
-    title: "Meta Ads Agent",
-    category: "Agentic analytics",
-    summary:
-      "Nine-stage agent for Meta Paid Social: research, copy, generated creative, policy screening, then publish through a proxy that can't burn your whole budget. Results write back, so each sprint starts with learnings from the latest data.",
-    problem:
-      "Paid social improves by testing. But creative and policy review move slower than the budget burns, so accounts run the same few ads until they fatigue. Point an AI at the account and the failure mode gets worse: nuked campaigns, or an account stuck in learning phase.",
-    approach:
-      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Kill and scale calls gate on conversion volume and an A/B significance test, never impressions and never a raw CTR sort. Each batch reserves 20-30% of its slots for untested angles.",
-    proof:
-      "One session takes a sprint from research to brand-safe creative packaged in a campaign that's ready to publish. Kill and scale rules live in documentation instead of one person's head. Every result feeds the recursive loop and briefs the next sprint.",
-    stack: [
-      "Claude Code",
-      "Python",
-      "Meta Marketing API",
-      "fal.ai",
-      "Supabase",
-      "Paid Social",
-      "Workflow Design"
-    ],
-    links: [
-      { href: "https://makometrics.com/meta-ads-agent", label: "Try the live demo" },
-      { href: "https://github.com/loganriebel/meta-ads-agent", label: "Open GitHub repo" }
-    ],
-    visual: {
-      kind: "agent-workflow",
-      caption:
-        "Simplified stage map. A human approves every transition, and every Meta write goes through the proxy.",
-      stages: [
-        { label: "Research angles" },
-        { label: "Copy + image briefs" },
-        { label: "Generate creatives" },
-        { label: "Policy screen", gate: true },
-        { label: "Publish via proxy", gate: true },
-        { label: "Analyze → write back" }
-      ],
-      output:
-        "Brand-safe ad variants with automated campaign build. Winning ads brief the next batch of creative and copy."
     }
   }
 ];
