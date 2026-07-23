@@ -229,7 +229,7 @@ export const projects: Project[] = [
     problem:
       "Testing is what improves paid social, but creative and policy review move slower than the budget burns, so accounts run the same few ads until they fatigue. Point an AI at the account and the failure mode gets worse: nuked campaigns, or an account stuck in learning phase.",
     approach:
-      "Nine stages, each writing a file the next reads. A human approves every handoff. The agent never touches the Meta API: writes go through a proxy that holds the token, forces everything paused, and caps budget. Killing an ad takes an impression floor and a Bayesian read against the ad set, never a raw CTR sort. Part of every batch tests outside the known winners.",
+      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Killing an ad takes an impression floor and a Bayesian read against the ad set, never a raw CTR sort. Each batch reserves 20-30% of its slots for untested angles.",
     proof:
       "One session takes a sprint from research to policy-screened, UTM-tagged variants ready to publish. Kill and scale rules live in version control instead of one person's Ads Manager, and every result feeds the patterns file that briefs the next sprint.",
     stack: [
