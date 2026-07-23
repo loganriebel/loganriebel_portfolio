@@ -231,7 +231,7 @@ export const projects: Project[] = [
     approach:
       "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Killing an ad takes an impression floor and a Bayesian read against the ad set, never a raw CTR sort. Each batch reserves 20-30% of its slots for untested angles.",
     proof:
-      "One session takes a sprint from research to policy-screened, UTM-tagged variants ready to publish. Kill and scale rules live in version control instead of one person's Ads Manager, and every result feeds the patterns file that briefs the next sprint.",
+      "One session takes a sprint from research to brand safe creative packaged in a campaign that's ready to publish. Kill and scale rules live in documentation instead of one person's head. Every result feeds the recursive loop and briefs the next sprint.",
     stack: [
       "Claude Code",
       "Python",
