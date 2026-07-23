@@ -225,11 +225,11 @@ export const projects: Project[] = [
     title: "Meta Ads Agent",
     category: "Agentic analytics",
     summary:
-      "Nine-stage agent for Meta paid social: research, copy, generated creative, policy screening, then publish through a proxy that can't spend money. Results write back, so each sprint starts from the last one's data.",
+      "Nine-stage agent for Meta Paid Social: research, copy, generated creative, policy screening, then publish through a proxy that can't burn your whole budget. Results write back, so each sprint starts with learnings from the latest data.",
     problem:
       "Testing is what improves paid social, but creative and policy review move slower than the budget burns, so accounts run the same few ads until they fatigue. Point an AI at the account and the failure mode gets worse: nuked campaigns, or an account stuck in learning phase.",
     approach:
-      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Killing an ad takes an impression floor and a Bayesian read against the ad set, never a raw CTR sort. Each batch reserves 20-30% of its slots for untested angles.",
+      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Kill and scale calls gate on conversion volume and an A/B significance test, never impressions and never a raw CTR sort. Below roughly 50 results in a week, the verdict is undecided, a state the schema records rather than a row it leaves empty. Each batch reserves 20-30% of its slots for untested angles.",
     proof:
       "One session takes a sprint from research to brand-safe creative packaged in a campaign that's ready to publish. Kill and scale rules live in documentation instead of one person's head. Every result feeds the recursive loop and briefs the next sprint.",
     stack: [
