@@ -229,7 +229,7 @@ export const projects: Project[] = [
     problem:
       "Paid social improves by testing. But creative and policy review move slower than the budget burns, so accounts run the same few ads until they fatigue. Point an AI at the account and the failure mode gets worse: nuked campaigns, or an account stuck in learning phase.",
     approach:
-      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Kill and scale calls gate on conversion volume and an A/B significance test, never impressions and never a raw CTR sort. Below roughly 50 results in a week, the verdict is undecided, a state the schema records rather than a row it leaves empty. Each batch reserves 20-30% of its slots for untested angles.",
+      "Nine stages, each writing a file the next reads. A human approves every handoff. All Meta writes go through a proxy that holds the token, forces everything paused, and caps budget. Kill and scale calls gate on conversion volume and an A/B significance test, never impressions and never a raw CTR sort. Each batch reserves 20-30% of its slots for untested angles.",
     proof:
       "One session takes a sprint from research to brand-safe creative packaged in a campaign that's ready to publish. Kill and scale rules live in documentation instead of one person's head. Every result feeds the recursive loop and briefs the next sprint.",
     stack: [
