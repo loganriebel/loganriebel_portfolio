@@ -258,7 +258,7 @@ export const projects: Project[] = [
         { label: "Analyze → write back" }
       ],
       output:
-        "Policy-screened, UTM-tagged ad variants plus the winners file that briefs the next sprint"
+        "Brand safe ad variants with automated campaign build. Winning ads brief the next batch of creative and copy."
     }
   }
 ];
